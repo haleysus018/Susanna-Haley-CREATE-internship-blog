@@ -15,7 +15,7 @@ My name is Susanna Haley, and I am a high school sophomore interning at the CREA
 
 On the first day of my internship, I had the opportunity to meet my three mentors—Brianna, Adrian, and Carlos—in person at the CREATE Lab, located in the Bill and Melinda Gates Center for Computer Science & Engineering. The first week was an introductory week. It allowed us to get to know one another and to meet other PhD students and interns, such as Kajia, Kate, and Toby.
 In the beginning, I started to learn Mermaid, a text-based tool used to create and visualize diagrams like flowcharts. Afterward, I transitioned to learning the basics of Flask, a lightweight Python framework for building web applications.
-![Susanna Haley profile photo](images/susanna_haley_profile_image.jpg)
+![person standing to the left and right. looking through glass to a lab. The lab has couch with blankets, wooden desks and a wooden table in the middle. Has advanced printing and other accessible technologies in the back.  ](images/CREATE_lab.jpg)
 
 
 ## Week 2
