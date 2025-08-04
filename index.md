@@ -9,13 +9,13 @@ title: Summer 2025 CREATE internship program
 ## About Me
 
 My name is Susanna Haley, and I am a high school sophomore interning at the CREATE (Center for Research and Education on Accessible Technology and Experiences.) Lab through the YES2 internship program at the University of Washington. YES2 stands for Youth Employment Solutions 2. This program helps low vision and blind students ages 16 to 21 gain job experience and become more independent. It is the second program in a series of two.During my internship, I worked alongside two other YES2 interns, Mohammad and Kaleb. Together, we helped three PhD students with their research projects. I specifically worked with Brianna Wimer on the Flowcharts Project. This project aims to make flowcharts more accessible for individuals with low vision or blindness by extracting and converting the flowchart information—such as nodes and arrows—into a list format that can be more easily accessed.
-![Susanna Haley profile photo](images/susanna_haley_profile_image.png)
+![Susanna Haley profile photo](images/susanna_haley_profile_images.png)
 
 ## Week 1
 
 On the first day of my internship, I had the opportunity to meet my three mentors—Brianna, Adrian, and Carlos—in person at the CREATE Lab, located in the Bill and Melinda Gates Center for Computer Science & Engineering. The first week was an introductory week. It allowed us to get to know one another and to meet other PhD students and interns, such as Kajia, Kate, and Toby.
 In the beginning, I started to learn Mermaid, a text-based tool used to create and visualize diagrams like flowcharts. Afterward, I transitioned to learning the basics of Flask, a lightweight Python framework for building web applications.
-![Susanna Haley profile photo](images/susanna_haley_profile_image.png)
+![Susanna Haley profile photo](images/susanna_haley_profile_image.jpg)
 
 
 ## Week 2
