@@ -36,5 +36,6 @@ I further explored APIs and learned how to use ChatGPT-4o’s API. Chatgpt-4o is
 
 ![shows her example website of the mermaid generator she created. there are 3 input boxes where you put in the topic of the flowchart generated, amount of nodes and edges. There are two buttons generate flowchart and handdrawn flowchart. There is a textarea box, where the output will go if you push handdrawn flowchart.](images/mermaidgenerator.png)
 
-[mermaid live editor](https://haleysus018.pythonanywhere.com/)
+[flowchart generator tool](https://haleysus018.pythonanywhere.com/)
+[Mermaid Live Editor](https://mermaid.live/edit#pako:eNqFj8lOwzAURX_FeuvUsmM7TiwFiQ5s2bCCsDCNO6AMlXFKoe2_4ySt2tIivHgez3nXW5jWuQEFs6L-nC60dehpmFXIj_uXx7d3M3XLtUFrXTQmDUMcBmhDU-prmBJfWUpw5Gee0lc0GNzt2pMdGt5gz0ksevZAHhoeBXSHRv8IOpx2uJcdBKNewNsE42sBxVF0EYKxc81viU8x-SsFwVJcBTn-Y9IbaBvj4UaM3tDh9AKHAOZ2mYNytjEBlMaWut3CthVn4BamNBkov8zNTDeFyyCr9h5b6eq5rssjaetmvgA108WH3zWrXDszXuq51acnpsqNHdVN5UCJzgBqCxtQlIVYkphKwaJERJT72y9QCcMiiQlNiGRcxDHfB_Dd9SSYx4JJLnksSdSCcv8DKqeq6Q)
 
