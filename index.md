@@ -27,11 +27,11 @@ I looked over 32 PDFs, including additional PDFs in the zip files, and extracted
 ## Week 3
 I began learning how to use OpenAI’s API to automatically generate Mermaid code for the flowchart images, which would then allow me to visualize them more efficiently. OpenAI’s API (Application Programming Interface) is a tool that lets developers connect their code to OpenAI’s AI models. However, as I continued applying the inclusion and exclusion criteria, I began to struggle with recognizing which images were true flowcharts and which were not. Some images labeled as flowcharts did not meet the definition or characteristics of a flowchart, leading to confusion. To fix this, I revisited the images and created Mermaid code for each one to confirm that it was indeed a flowchart. This process helped me ensure accuracy but was time-consuming and required careful attention to detail. So i had to stop the OpenAi project I was doing. 
 
-![example of google drive with pdf's in them](images/criteriaattemp.png)
+![example of her inclusion exclusion criteria she attempted](images/criteriaattemp.png)
 
 images
 /Screenshot 2025-08-04 105640 (2).png
 ## Week 4
 I further explored APIs and learned how to use ChatGPT-4o’s API. Chatgpt-4o is a different large language model version. I learned how to generate content based on prompts to Chatgpt4o. I began by having the AI generate random flowcharts. Then, I developed a program where users could input the number of nodes and edges, as well as the topic of the flowchart. The program has two buttons: "Generate Flowchart," which automatically produces the flowchart as an SVG image using AI, and "Handdrawn," which provides a list of nodes and descriptions, allowing users to manually assign node positions. SVG files, or Scalable Vector Graphics, are primarily used for creating and displaying two-dimensional graphics, especially on websites This feature helps include hand-drawn flowcharts into our dataset. Additionally, I collected statistics on the flowcharts, including the number of nodes, edges, and the variety of shapes used. I categorized these measurements into groups of fewer than 10 , between 10 and 19, and 20 or more nodes and edges.
 
-![Susanna Haley profile photo](images/susanna_haley_profile_image.png)
+![shows her example website of the mermaid generator she created. there are 3 input boxes where you put in the topic of the flowchart generated, amount of nodes and edges. There are two buttons generate flowchart and handdrawn flowchart. There is a textarea box, where the output will go if you push handdrawn flowchart.](images/mermaidgenerator.png)
