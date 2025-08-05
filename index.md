@@ -60,7 +60,7 @@ You put in proper mermaid code into a text box. For this purpose it will always 
 
 
 ## natural language generator of flowchart
-This website is only static and doesn't have any backend programming. It it were to be deployed it would be able to have a flask backend, so this tool doesn't work fully. If it worked fully, you would type in natural speech of what you want the flowchart to look like like what nodes you want what shape they are what arrows the edges point to etc... It would send it to OpenAi API and give it a prompt to give back mermaid code and Only mermaid code based on the description of the flowchart. Then it will render it as an svg file. 
+This website is only static and doesn't have any backend programming. It it were to be deployed it would be able to have a flask backend, so this tool doesn't work fully. If it worked fully, you would type in natural speech of what you want the flowchart to look like like what nodes you want what shape they are what arrows the edges point to etc... It would send it to OpenAi API and give it a prompt to give back mermaid code and Only mermaid code based on the description of the flowchart. Then it will render it as an svg file. <a href="natural_language_mermaid_generator.html">natural_language_mermaid_generator</a>
 
 ## mermaid website
 If you need the mermaid live ediotr or the mermaid documenattion look at this website:[Mermaid main website](https://mermaid.js.org/)
