@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mermaid Diagram Generator</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 2rem;
+    background: #f9f9f9;
+  }
+  h1 {
+    text-align: center;
+  }
+  textarea {
+    width: 100%;
+    height: 200px;
+    font-family: monospace;
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+  }
+  button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+  button:hover {
+    background-color: #45a049;
+  }
+  #diagram {
+    border: 1px solid #ccc;
+    background: white;
+    padding: 1rem;
+    min-height: 300px;
+  }
+</style>
+</head>
+<body>
+
+<h1>Mermaid Diagram Generator</h1>
+
+<textarea id="mermaidInput" placeholder="Type your Mermaid code here...">
+graph TD
+    A[Start] --> B{Decision}
+    B -- Yes --> C[Option 1]
+    B -- No --> D[Option 2]
+    C --> E[End]
+    D --> E
+</textarea>
+<br />
+<button id="renderBtn">Submit</button>
+
+<div id="diagram">Your diagram will appear here</div>
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+  // Initialize mermaid without automatic rendering
+  mermaid.initialize({ startOnLoad: false });
+
+  const input = document.getElementById('mermaidInput');
+  const diagramContainer = document.getElementById('diagram');
+  const renderBtn = document.getElementById('renderBtn');
+
+  renderBtn.addEventListener('click', async () => {
+    const code = input.value.trim();
+    if (!code) {
+      diagramContainer.innerHTML = 'Please enter Mermaid diagram code.';
+      return;
+    }
+
+    try {
+      // Render Mermaid diagram to SVG
+      const { svg } = await mermaid.render('theGraph', code);
+      diagramContainer.innerHTML = svg;
+    } catch (error) {
+      diagramContainer.innerHTML = '<pre style="color:red;">Error rendering diagram:\n' + error.message + '</pre>';
+    }
+  });
+
+  // Optional: render initial diagram on page load
+  renderBtn.click();
+</script>
+
+</body>
+</html>
