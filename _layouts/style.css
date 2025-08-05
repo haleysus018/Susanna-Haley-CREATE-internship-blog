@@ -132,7 +132,8 @@ blockquote {
 }
 
 .site-avatar-image {
-  display: inline-block;  /* keep it inline so text-align works */
-  max-width: 100%;        /* make it responsive */
-  height: 500px;          /* or your preferred fixed height */
+  max-width: 100%;      /* Correct way to limit image width */
+  height: 500px;        /* keep your fixed height */
+  display: inline-block; /* keeps it inline and respects parent's text-align */
+  /* Remove text-align here; not needed */
 }
