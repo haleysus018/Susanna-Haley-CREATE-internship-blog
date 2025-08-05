@@ -117,3 +117,13 @@ blockquote {
   margin: 1.3em 0;
   border-radius: 0 33px 33px 0;
 }
+
+.site-avatar {
+  text-align: center; /* centers the image inside the link */
+}
+
+.site-avatar-image {
+  max-width: 300px;
+  height: auto;
+  display: inline-block;
+}
