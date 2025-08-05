@@ -123,7 +123,7 @@ blockquote {
 }
 
 .site-avatar-image {
-  max-width: 300px;
-  height: auto;
+  max-width: auto;
+  height: 500px;
   display: inline-block;
 }
