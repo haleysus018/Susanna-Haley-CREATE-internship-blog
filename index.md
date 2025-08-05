@@ -26,14 +26,14 @@ In the beginning, I started to learn Mermaid, a text-based tool used to create a
 I looked over 32 PDFs, including additional PDFs in the zip files, and extracted a total of 342 images that looked like flowcharts. I organized this data into a Google Sheet, documenting details such as file name, PDF name, and lecture name. Next, I applied inclusion and exclusion criteria to narrow down the number of flowcharts that met the definition for the project. The inclusion criteria required flowcharts to have at least two nodes within a shape and at least one edge. The exclusion criteria eliminated flowcharts that were not in English, lacked visual clarity, or were duplicates.
 
 <p style="text-align: center;">
-<img src="https://raw.githubusercontent.com/haleysus018/Susanna-Haley-CREATE-internship-blog/master/images/pdfs.png" alt="example of google drive with pdf's in them" width="400" height="500 text-align: center;">
+<img src="https://raw.githubusercontent.com/haleysus018/Susanna-Haley-CREATE-internship-blog/master/images/pdfs.png" alt="example of google drive with pdf's in them" width="500" height="400 text-align: center;">
 </p>
 
 
 ## Week 3
 I began learning how to use OpenAI’s API to automatically generate Mermaid code for the flowchart images, which would then allow me to visualize them more efficiently. OpenAI’s API (Application Programming Interface) is a tool that lets developers connect their code to OpenAI’s AI models. However, as I continued applying the inclusion and exclusion criteria, I began to struggle with recognizing which images were true flowcharts and which were not. Some images labeled as flowcharts did not meet the definition or characteristics of a flowchart, leading to confusion. To fix this, I revisited the images and created Mermaid code for each one to confirm that it was indeed a flowchart. This process helped me ensure accuracy but was time-consuming and required careful attention to detail. So i had to stop the OpenAi project I was doing. 
 <p style="text-align: center;">
-<img src="https://raw.githubusercontent.com/haleysus018/Susanna-Haley-CREATE-internship-blog/master/images/criteriaattemp.png" alt="example of her inclusion exclusion criteria Susanna attempted" width="400" height="400 text-align:center"></p>
+<img src="https://raw.githubusercontent.com/haleysus018/Susanna-Haley-CREATE-internship-blog/master/images/criteriaattemp.png" alt="example of her inclusion exclusion criteria Susanna attempted" width="500" height="400 text-align:center"></p>
 
 
 
@@ -41,7 +41,7 @@ I began learning how to use OpenAI’s API to automatically generate Mermaid cod
 I further explored APIs and learned how to use ChatGPT-4o’s API. Chatgpt-4o is a different large language model version. I learned how to generate content based on prompts to Chatgpt4o. I began by having the AI generate random flowcharts. Then, I developed a program where users could input the number of nodes and edges, as well as the topic of the flowchart. The program has two buttons: "Generate Flowchart," which automatically produces the flowchart as an SVG image using AI, and "Handdrawn," which provides a list of nodes and descriptions, allowing users to manually assign node positions. SVG files, or Scalable Vector Graphics, are primarily used for creating and displaying two-dimensional graphics, especially on websites This feature helps include hand-drawn flowcharts into our dataset. Additionally, I collected statistics on the flowcharts, including the number of nodes, edges, and the variety of shapes used. I categorized these measurements into groups of fewer than 10 , between 10 and 19, and 20 or more nodes and edges.
 
 <p style="text-align: center;">
-<img src="https://raw.githubusercontent.com/haleysus018/Susanna-Haley-CREATE-internship-blog/master/images/mermaidgenerator.png" alt="shows her example website of the mermaid generator she created. there are 3 input boxes where you put in the topic of the flowchart generated, amount of nodes and edges. There are two buttons generate flowchart and handdrawn flowchart. There is a textarea box, where the output will go if you push handdrawn flowchart." width="400" height="500 text-align:center">
+<img src="https://raw.githubusercontent.com/haleysus018/Susanna-Haley-CREATE-internship-blog/master/images/mermaidgenerator.png" alt="shows her example website of the mermaid generator she created. there are 3 input boxes where you put in the topic of the flowchart generated, amount of nodes and edges. There are two buttons generate flowchart and handdrawn flowchart. There is a textarea box, where the output will go if you push handdrawn flowchart." width="500" height="400 text-align:center">
 </p>
 
 ## Struggles
