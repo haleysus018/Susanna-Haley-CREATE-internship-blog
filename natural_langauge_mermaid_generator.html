@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flowchart Generator</title>
+    <style> 
+        body { font-family: Arial, sans-serif; margin: 2em;}
+        #diagram { border:1px solid #bbb; min-height:240px; margin-top:1em; padding:1em; }
+        textarea { width: 100%; min-height:80px; }
+        button { margin-top: 1em; }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.min.js"></script>
+</head>
+<body>
+    <h2>Describe your flowchart</h2>
+    <form id="flowForm">
+        <textarea id="desc" required placeholder="e.g.: User enters credentials, system validates, ..."></textarea><br>
+        <button type="submit">Generate Flowchart</button>
+    </form>
+    <div id="diagram"></div>
+    <pre id="error" style="color:red;"></pre>
+
+<script>
+document.getElementById('flowForm').onsubmit = async function(e) {
+    e.preventDefault();
+    document.getElementById('diagram').innerHTML = 'Generating...';
+    document.getElementById('error').textContent = '';
+    const desc = document.getElementById('desc').value.trim();
+
+    try {
+        const res = await fetch('/generate_mermaid', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({description: desc})
+        });
+        const data = await res.json();
+        if (res.status !== 200 || !data.mermaid) {
+            document.getElementById('diagram').innerHTML = '';
+            document.getElementById('error').textContent = data.error || "No Mermaid code generated.";
+            return;
+        }
+        const mermaidCode = data.mermaid;
+        if (!mermaidCode || typeof mermaidCode !== "string" || !mermaidCode.trim().toLowerCase().startsWith('flowchart')) {
+            document.getElementById('diagram').innerHTML = '';
+            document.getElementById('error').textContent = "Mermaid code invalid. Try rephrasing.";
+            return;
+        }
+        mermaid.initialize({ startOnLoad: false });
+        const { svg } = await mermaid.render('chart', mermaidCode);
+        document.getElementById('diagram').innerHTML = svg;
+    } catch (err) {
+        document.getElementById('diagram').innerHTML = '';
+        document.getElementById('error').textContent = 'Mermaid rendering error: ' + err.message;
+    }
+};
+</script>
+</body>
+</html>
