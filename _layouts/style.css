@@ -131,4 +131,5 @@ blockquote {
   max-width: auto;
   height: 500px;
   display: inline-block;
+  text-align: center;
 }
