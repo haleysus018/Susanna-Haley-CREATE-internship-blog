@@ -52,15 +52,21 @@ During this internship, I learned enough Mermaid to create flowcharts. I also st
 
 ## mad libs generator tool
 You put in the amount of edges you want in the flowchart then you put in how many nodes you want the flowchart to have. Then you put in a small description of what you want the flowchart process to be about. Once you have done that you click either the generate flowchart button or the list button. The generate flowchart button will ask OpenAi's API to create mermaid code that has the description you had, amount of nodes and edges you wanted. This mermaid code will appear in a textarea where you can edit the mermaid code it gives you in case you want to change any part of the mermaid code but still want to keep ther parts of it. Then you push the render mermaid diagram button which will then send the mermaid code in the textarea to my html page in order to render it as an svg file. The list button will ask the OpenAi API to create a list of nodes and their properties for you to determine where the edges go and if there are any comments in the edges and how many edges you wanted. 
+[mad libs generator tool](https://haleysus018.pythonanywhere.com/)
 
-##diagram generato
+##diagram generator
 You put in proper mermaid code into a text box. For this purpose it will always start with Graph direction_of_flowchar then write the nodes out what they point to etc... Then push the green submit button which will then render the mermaid code in the textarea you wrote the mermaid code in and it will show the rendered flchart or diagram as an SVG file. 
+<a href="mermaid_generator.html">Open Mermaid Generator</a>
+
 
 ## natural language generator of flowchart
 This website is only static and doesn't have any backend programming. It it were to be deployed it would be able to have a flask backend, so this tool doesn't work fully. If it worked fully, you would type in natural speech of what you want the flowchart to look like like what nodes you want what shape they are what arrows the edges point to etc... It would send it to OpenAi API and give it a prompt to give back mermaid code and Only mermaid code based on the description of the flowchart. Then it will render it as an svg file. 
-[mad libs generator tool](https://haleysus018.pythonanywhere.com/)
-[Mermaid main website](https://mermaid.js.org/)
-<a href="mermaid_generator.html">Open Mermaid Generator</a>
+
+## mermaid website
+If you need the mermaid live ediotr or the mermaid documenattion look at this website:[Mermaid main website](https://mermaid.js.org/)
+
+
+
 
 
 
