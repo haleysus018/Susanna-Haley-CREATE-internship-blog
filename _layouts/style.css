@@ -126,12 +126,13 @@ blockquote {
 }
 
 .site-avatar {
-  text-align: center; /* centers the image inside the link */
+  text-align: center;  /* centers inline or inline-block elements horizontally */
+  margin: 0 auto;      /* centers the container itself if it has a width */
+  width: 100%;         /* make sure it takes full width of its container */
 }
 
 .site-avatar-image {
-  max-width: auto;
-  height: 500px;
-  display: inline-block;
-  text-align: center;
+  display: inline-block;  /* keep it inline so text-align works */
+  max-width: 100%;        /* make it responsive */
+  height: 500px;          /* or your preferred fixed height */
 }
