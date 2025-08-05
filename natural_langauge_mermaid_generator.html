@@ -4,19 +4,200 @@
     <meta charset="UTF-8">
     <title>Flowchart Generator</title>
     <style> 
-        body { font-family: Arial, sans-serif; margin: 2em;}
-        #diagram { border:1px solid #bbb; min-height:240px; margin-top:1em; padding:1em; }
-        textarea { width: 100%; min-height:80px; }
-        button { margin-top: 1em; }
+       /* Base styling for body and container to use full viewport with padding and flexible vertical layout */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 2em;
+    box-sizing: border-box;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: ivory;
+    color: #222;
+}
+
+/* Container for form and diagram to center and max width for readability */
+#container {
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    margin: 0 auto;
+    flex-grow: 1;
+}
+
+/* Heading with subtle bottom margin */
+h2 {
+    margin-bottom: 0.8em;
+    color: #1a1a1a;
+}
+
+/* Form styling with flex layout for vertical stack */
+#flowForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+/* Textarea—full width, minimum height, padding, border radius, subtle shadow for depth */
+textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 0.8em;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    font-size: 1rem;
+    resize: vertical;
+    box-shadow: inset 0 1px 3px rgb(0 0 0 / 0.1);
+    transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 5px #4a90e2;
+}
+
+/* Submit button with consistent padding, color, border-radius, hover effect, and accessible cursor */
+button[type="submit"], #toggleThemeBtn {
+    padding: 0.75em 1.25em;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: none;
+    background-color: #4a90e2;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-start;
+    box-shadow: 0 2px 6px rgb(74 144 226 / 0.5);
+}
+
+button[type="submit"]:hover, #toggleThemeBtn:hover {
+    background-color: #357ABD;
+    box-shadow: 0 3px 9px rgb(53 122 189 / 0.7);
+}
+
+/* Diagram container with border, padding, margin, flexible resizing */
+#diagram {
+    border: 1px solid #bbb;
+    min-height: 240px;
+    margin-top: 1em;
+    padding: 1em;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+    flex-grow: 1;
+    overflow: auto;
+}
+
+/* Error message styling */
+#error {
+    color: #b00020;
+    margin-top: 0.5em;
+    font-weight: 600;
+}
+
+/* Flex container wrapper for main area (form + buttons + diagram) to stack nicely on small screens */
+.main-flex-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    flex-grow: 1;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 800px) {
+    .main-flex-wrapper {
+        flex-direction: column;
+    }
+}
+
+/* Inverted (dark) mode styles */
+body.inverted {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.inverted textarea {
+    background-color: #242424;
+    color: #e0e0e0;
+    border-color: #444;
+    box-shadow: inset 0 1px 3px rgb(255 255 255 / 0.1);
+}
+
+body.inverted textarea:focus {
+    border-color: #90caf9;
+    box-shadow: 0 0 5px #90caf9;
+}
+
+body.inverted #diagram {
+    background-color: #1e1e1e;
+    border-color: #444;
+    box-shadow: 0 2px 8px rgb(255 255 255 / 0.1);
+}
+
+body.inverted button[type="submit"], body.inverted #toggleThemeBtn {
+    background-color: #90caf9;
+    color: #121212;
+    box-shadow: 0 2px 6px rgb(144 202 249 / 0.7);
+}
+
+body.inverted button[type="submit"]:hover, body.inverted #toggleThemeBtn:hover {
+    background-color: #5d99c6;
+    box-shadow: 0 3px 9px rgb(93 153 198 / 0.9);
+}
+
+/* Neutral background for the whole page */
+body {
+    background-color: ivory;
+    /* keep other existing styles */
+}
+
+/* Container to hold buttons side by side with spacing */
+#buttonContainer {
+    display: flex;
+    gap: 1.5em;
+    margin-top: 1em;
+}
+
+/* Pink submit button */
+button[type="submit"] {
+    background-color: #e91e63;   /* pink */
+    color: white;
+    box-shadow: 0 2px 6px rgb(233 30 99 / 0.5);
+}
+
+button[type="submit"]:hover {
+    background-color: #ad1457;
+    box-shadow: 0 3px 9px rgb(173 20 87 / 0.7);
+}
+
+/* Purple toggle button */
+#toggleThemeBtn {
+    background-color: #673ab7;   /* purple */
+    color: white;
+    box-shadow: 0 2px 6px rgb(103 58 183 / 0.5);
+}
+
+#toggleThemeBtn:hover {
+    background-color: #512da8;
+    box-shadow: 0 3px 9px rgb(81 45 168 / 0.7);
+}
+
     </style>
     <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.min.js"></script>
 </head>
 <body>
     <h2>Describe your flowchart</h2>
-    <form id="flowForm">
-        <textarea id="desc" required placeholder="e.g.: User enters credentials, system validates, ..."></textarea><br>
+   <form id="flowForm">
+    <textarea id="desc" required placeholder="e.g.: User enters credentials, system validates, ..."></textarea><br>
+    <div id="buttonContainer">
         <button type="submit">Generate Flowchart</button>
-    </form>
+        <button id="toggleThemeBtn" type="button">Toggle Dark Mode</button>
+    </div>
+</form>
+
+
     <div id="diagram"></div>
     <pre id="error" style="color:red;"></pre>
 
@@ -53,6 +234,10 @@ document.getElementById('flowForm').onsubmit = async function(e) {
         document.getElementById('error').textContent = 'Mermaid rendering error: ' + err.message;
     }
 };
+document.getElementById('toggleThemeBtn').onclick = function() {
+  document.body.classList.toggle('inverted');
+};
+
 </script>
 </body>
 </html>
