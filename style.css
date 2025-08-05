@@ -126,14 +126,15 @@ blockquote {
 }
 
 .site-avatar {
-  text-align: center;  /* centers inline or inline-block elements horizontally */
-  margin: 0 auto;      /* centers the container itself if it has a width */
-  width: 100%;         /* make sure it takes full width of its container */
+  display: block;         /* makes the anchor behave like a block element */
+  width: fit-content;     /* shrink wraps the anchor to the image width */
+  margin: 0 auto;         /* centers the block horizontally */
+  text-align: center;     /* optional, centers inline children */
 }
 
 .site-avatar-image {
-  max-width: 100%;      /* Correct way to limit image width */
-  height: 500px;        /* keep your fixed height */
-  display: inline-block; /* keeps it inline and respects parent's text-align */
-  /* Remove text-align here; not needed */
+  display: block;         /* makes image a block element */
+  margin: 0 auto;         /* centers image inside the anchor */
+  max-width: 100%;        /* responsive */
+  height: 500px;          /* per your fixed height */
 }
