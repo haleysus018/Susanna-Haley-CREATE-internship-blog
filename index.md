@@ -26,7 +26,7 @@ In the beginning, I started to learn Mermaid, a text-based tool used to create a
 I looked over 32 PDFs, including additional PDFs in the zip files, and extracted a total of 342 images that looked like flowcharts. I organized this data into a Google Sheet, documenting details such as file name, PDF name, and lecture name. Next, I applied inclusion and exclusion criteria to narrow down the number of flowcharts that met the definition for the project. The inclusion criteria required flowcharts to have at least two nodes within a shape and at least one edge. The exclusion criteria eliminated flowcharts that were not in English, lacked visual clarity, or were duplicates.
 
 <p style="text-align: center;">
-<img src="https://raw.githubusercontent.com/haleysus018/Susanna-Haley-CREATE-internship-blog/master/images/pdfs.png" alt="example of google drive with pdf's in them" width="500" height="400 text-align: center;">
+<img src="https://raw.githubusercontent.com/haleysus018/Susanna-Haley-CREATE-internship-blog/master/images/pdfs.png" alt="example of google drive with pdf's in them" width="600" height="400 text-align: center;">
 </p>
 
 
