@@ -54,7 +54,7 @@ During this internship, I learned enough Mermaid to create flowcharts. I also st
 You put in the amount of edges you want in the flowchart then you put in how many nodes you want the flowchart to have. Then you put in a small description of what you want the flowchart process to be about. Once you have done that you click either the generate flowchart button or the hand drawn button. The generate flowchart button will ask OpenAi's API to create mermaid code that has the description you had, amount of nodes and edges you wanted. This mermaid code will appear in a textarea where you can edit the mermaid code it gives you in case you want to change any part of the mermaid code but still want to keep ther parts of it. Then you push the render mermaid diagram button which will then send the mermaid code in the textarea to my html page in order to render it as an svg file. The hand drawn button will ask the OpenAi API to create a list of nodes and their properties and edges for you to determine where the edges and nodes go.
 [mad libs generator tool](https://haleysus018.pythonanywhere.com/)
 
-##diagram generator
+## diagram generator
 You put in proper mermaid code into a text box. For this purpose it will always start with Graph direction_of_flowchar then write the nodes out what they point to etc... Then push the green submit button which will then render the mermaid code in the textarea you wrote the mermaid code in and it will show the rendered flchart or diagram as an SVG file. 
 <a href="mermaid_generator.html">Open Mermaid Generator</a>
 
