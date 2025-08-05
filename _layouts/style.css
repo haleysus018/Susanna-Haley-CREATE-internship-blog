@@ -15,12 +15,17 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 1.5em;
   margin-bottom: 0.6em;
   letter-spacing: 1px;
+    text-align: center;   /* Add this line */
+
+
 }
 h1 {
   font-size: 2.7em;
   font-weight: 700;
   border-bottom: 2px solid #e0e0e0;
   padding-bottom: 0.2em;
+  text-align: center;   /* Add this line */
+
 }
 h2 {
   font-size: 2em;
@@ -117,6 +122,11 @@ blockquote {
   margin: 1.3em 0;
   border-radius: 0 33px 33px 0;
 }
+
+.site-avatar {
+  text-align: center; /* centers the image inside the link */
+}
+
 .site-avatar-image {
   max-width: auto;
   height: 500px;
