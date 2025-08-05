@@ -52,5 +52,7 @@ During this internship, I learned enough Mermaid to create flowcharts. I also st
 
 [flowchart generator tool](https://haleysus018.pythonanywhere.com/)
 [Mermaid main website](https://mermaid.js.org/)
+<a href="mermaid_generator.html">Open Mermaid Generator</a>
+
 
 
