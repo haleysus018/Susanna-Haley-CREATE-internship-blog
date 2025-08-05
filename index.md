@@ -50,7 +50,7 @@ I had a hard time slowing down and taking my time. I usually like to work quickl
 ## What I learned
 During this internship, I learned enough Mermaid to create flowcharts. I also started to learn a bit of Flask and set up my computer as the server for my Flask program. Additionally, I learned more about APIs and some basic prompt engineering-a specific way to write a prompt to get the LLM to produce a specific output- to get the LLM to give me the specific output I was looking for so that I could render it in the HTML file. HTML is markup code to structure the content on a webpage. I also gained a deeper understanding of accessibility technology—such as the Monarch—and the ideas within this community, as well as what research might be like for me if I decide to pursue that path. The monarch is a multiline refreshable braille display  and graphics developed by American Printing House for the Blind. Finally, I learned a little bit of pandas-a lightweight python framework to work with data in files- to work with Excel sheets and gather statistics from them instead of doing it manually. This week, Week 5, I learned about how to deploy a simple website using services like pythonanywhere.
 
-[flowchart generator tool](https://haleysus018.pythonanywhere.com/)
+[mad libs generator tool](https://haleysus018.pythonanywhere.com/)
 [Mermaid main website](https://mermaid.js.org/)
 <a href="mermaid_generator.html">Open Mermaid Generator</a>
 
