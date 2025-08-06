@@ -79,7 +79,7 @@ If it worked fully, you would type in plain, natural language describing how you
 <a href="natural_langauge_mermaid_generator.html">convert natural language to mermaid flowchart</a>
 
 <p style="text-align: center;">
-<img src="https://raw.githubusercontent.com/haleysus018/Susanna-Haley-CREATE-internship-blog/master/images/Screenshot (1972).PNG" alt="There is a text area where the user puts in their description of their desired flowchart and then there is a part of the website where the mermaid flowchart will appear when you push the button
+<img src="https://raw.githubusercontent.com/haleysus018/Susanna-Haley-CREATE-internship-blog/master/images/Screenshot (1972).PNG" alt="There is a text area where the user puts in their description of their desired flowchart and then there is a part of the website where the mermaid flowchart will appear when you push the generate flowchart button. The generate flowchart button is _ color and the toggle mode button is __ color
   " width="500" height="400 text-align:center">
 </p>
 ## how I built this
