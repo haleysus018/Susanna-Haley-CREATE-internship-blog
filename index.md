@@ -76,6 +76,8 @@ I created a textarea in the webpage where users can enter their mermaid code. Th
 This website is a simple static site without any backend programming. If deployed with a backend like Flask, it could work fully. Right now, it doesn't because the backend part is missing.
 
 If it worked fully, you would type in plain, natural language describing how you want a flowchart to look—what nodes it should have, their shapes, where the arrows (edges) point, etc. Then the site would send this description to the OpenAI API, which would generate Mermaid code (a text format for diagrams) based only on your description. That Mermaid code would be used to create and display the flowchart as an SVG image on the page.
+<a href="natural_language_mermaid_generator.html">convert natural language to mermaid flowchart</a>
+
 <p style="text-align: center;">
 <img src="https://raw.githubusercontent.com/haleysus018/Susanna-Haley-CREATE-internship-blog/master/images/mermaidgenerator.png" alt="shows her example website of the mermaid generator she created. there are 3 input boxes where you put in the topic of the flowchart generated, amount of nodes and edges. There are two buttons generate flowchart and handdrawn flowchart. There is a textarea box, where the output will go if you push handdrawn flowchart." width="500" height="400 text-align:center">
 </p>
