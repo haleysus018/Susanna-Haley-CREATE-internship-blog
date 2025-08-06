@@ -67,7 +67,7 @@ You type valid mermaid code in a text box. For example, it starts with "graph di
 
 <a href="mermaid_generator.html">Open Mermaid Generator</a>
 <p style="text-align: center;">
-<img src="https://raw.githubusercontent.com/haleysus018/Susanna-Haley-CREATE-internship-blog/master/images/Screenshot 2025-08-05 154602.png" alt="Shows an example of her mermaid generator. There is a textarea where the user writes" width="500" height="400 text-align:center">
+<img src="https://raw.githubusercontent.com/haleysus018/Susanna-Haley-CREATE-internship-blog/master/images/Screenshot 2025-08-05 154602.png" alt="Shows an example of her mermaid generator. There is a textarea where the user writes in their mermaid code then you push the green submit button and there is a purple toggle dark mode button. The flowchart will then appear in an area on the page below those two buttons." width="500" height="400 text-align:center">
 </p>
 ## how I built this
 I created a textarea in the webpage where users can enter their mermaid code. The code is saved in a variable and passed to a function that uses mermaid's API render function. This function turns the mermaid code into an SVG diagram. The SVG is then inserted into a specific part of the HTML page for display. If the code isn't valid mermaid syntax, an error is shown.
@@ -79,7 +79,7 @@ If it worked fully, you would type in plain, natural language describing how you
 <a href="natural_langauge_mermaid_generator.html">convert natural language to mermaid flowchart</a>
 
 <p style="text-align: center;">
-<img src="https://raw.githubusercontent.com/haleysus018/Susanna-Haley-CREATE-internship-blog/master/images/Screenshot (1972).PNG" alt="There is a text area where the user puts in their description of their desired flowchart and then there is a part of the website where the mermaid flowchart will appear when you push the generate flowchart button. The generate flowchart button is _ color and the toggle mode button is __ color
+<img src="https://raw.githubusercontent.com/haleysus018/Susanna-Haley-CREATE-internship-blog/master/images/Screenshot (1972).PNG" alt="There is a text area where the user puts in their description of their desired flowchart and then there is a part of the website where the mermaid flowchart will appear when you push the generate flowchart button. The generate flowchart button is _ color and the toggle mode button is __ color. the genereated flowchart will appear below these two buttons in a designated area. 
   " width="500" height="400 text-align:center">
 </p>
 ## how I built this
