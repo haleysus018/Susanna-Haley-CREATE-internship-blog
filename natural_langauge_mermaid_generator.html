@@ -221,7 +221,7 @@ document.getElementById('flowForm').onsubmit = async function(e) {
             return;
         }
         const mermaidCode = data.mermaid;
-        if (!mermaidCode || typeof mermaidCode !== "string" || !mermaidCode.trim().toLowerCase().startsWith('flowchart')) {
+        if (!mermaidCode || typeof mermaidCode !== "string" || (!mermaidCode.trim().toLowerCase().startsWith('flowchart') &&  !mermaidCode.trim().toLowerCase().startsWith('graph'))) {
             document.getElementById('diagram').innerHTML = '';
             document.getElementById('error').textContent = "Mermaid code invalid. Try rephrasing.";
             return;
