@@ -87,7 +87,11 @@ I had an app.py,index.html and style.css files. I had a textarea where the user 
 ## Mermaid website
 If you need the mermaid live ediotr or the mermaid documenattion look at this website:[Mermaid main website](https://mermaid.js.org/)
 
+## my final dataset along with alt text note the rendered svg files look differenet from the original ones
 
+<a href="alt_text_dataset.html">Alt text flowchart dataset</a>
+
+## How I built this 
 
 
 
