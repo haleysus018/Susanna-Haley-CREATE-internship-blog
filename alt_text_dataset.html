@@ -4,7 +4,6 @@
 <meta charset="UTF-8" />
 <title>Mermaid Flowcharts with Descriptive Alt Text</title>
 <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-<script>mermaid.initialize({startOnLoad:true});</script>
 <style>
   body { font-family: Arial, sans-serif; padding: 20px; }
   .flowchart-container { margin-bottom: 40px; }
@@ -1522,6 +1521,54 @@ flowchart TD
 </div>
 </div>
 
+<script>
+// Initialize Mermaid but don't render automatically
+mermaid.initialize({ startOnLoad: false });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const containers = document.querySelectorAll('.flowchart-container');
+  containers.forEach((container, i) => {
+    const flowchartDiv = container.querySelector('.mermaid');
+    if (!flowchartDiv) return;
+
+    // Hide the flowchart container by default
+    container.style.display = 'none';
+
+    // Create a button
+    const btn = document.createElement('button');
+    btn.textContent = container.querySelector('.flowchart-title')?.textContent.trim() || `Show flowchart #${i+1}`;
+    btn.setAttribute('aria-expanded', 'false');
+    btn.style.display = 'block';
+    btn.style.margin = '10px 0';
+
+    // Insert the button before the container
+    container.parentNode.insertBefore(btn, container);
+
+    let rendered = false;
+
+    btn.addEventListener('click', () => {
+      const isHidden = container.style.display === 'none';
+      if (isHidden) {
+        container.style.display = 'block';
+        btn.setAttribute('aria-expanded', 'true');
+        if (!rendered) {
+          try {
+            mermaid.init(undefined, flowchartDiv);
+            rendered = true;
+          } catch (e) {
+            console.error('Mermaid render error:', e);
+          }
+        }
+      } else {
+        container.style.display = 'none';
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+});
+</script>
+
+</script>
 
 </body>
 </html>
