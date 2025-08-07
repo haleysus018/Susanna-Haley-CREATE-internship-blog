@@ -53,7 +53,7 @@ During this internship, I learned enough Mermaid to create flowcharts. I also st
 ## Mad libs generator tool
 You enter how many edges and nodes you want for your flowchart, plus a short description of what the flowchart should show. Then you click either the "Generate Flowchart" button or the "Hand Drawn" button. The "Generate Flowchart" button asks OpenAI's API to create mermaid code based on your inputs. This code appears in a text box where you can edit it if you want. Then you click "Render Mermaid Diagram" to turn that code into an SVG image shown on the page. The "Hand Drawn" button asks OpenAI to create a list of nodes and edges with properties, which you can use to decide how to position them, shown in a read-only box. 
 
-[mad libs generator tool](https://haleysus018.pythonanywhere.com/)
+[mad libs generator tool][(https://haleysus018.pythonanywhere.com/)](https://haleysus018.pythonanywhere.com/)
 <p style="text-align: center;">
 <img src="https://raw.githubusercontent.com/haleysus018/Susanna-Haley-CREATE-internship-blog/master/images/Screenshot 2025-08-05 153102.png" alt="shows an example of her mermaid mad libs generator tool. There are three text boxes for topic,nodes and edges. then there is a blue generat flowchart and then to the right of that the green handdrawn button. There is a place where it the AI hands back the mermaid code and then below that a green render mermaid diagram button ." width="500" height="400 text-align:center">
 </p>
@@ -107,6 +107,7 @@ This approach enables reading the CSV and then generating an HTML page with all 
 <a href="alt_text_dataset.html">Alt text flowchart dataset</a>
 
 
-
+## Final Takeaway from the internship
+It was super fun meeting all the new  people and getting conected in the CS community. It was really cool seeing all the technologies that are being developed and researched and the different labs that exist like WATAP and CREATE. IT also helped me see a litle better what research at an institution would lok like and what other internships would look like. IT was also super fun learning about new coding concepts like working with API's and a little more about Python. I really enjoyed this internship and hope that others who do this internship will have as much fun as I did. 
 
 
