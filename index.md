@@ -88,136 +88,22 @@ I had an app.py,index.html and style.css files. I had a textarea where the user 
 If you need the mermaid live ediotr or the mermaid documenattion look at this website:[Mermaid main website](https://mermaid.js.org/)
 
 ## my final dataset along with alt text note the rendered svg files look differenet from the original ones
-This Python code is designed to read Mermaid flowchart descriptions from a CSV file, analyze their structure, and generate an HTML page where each flowchart is rendered with detailed, accessible alt text describing the nodes, their shapes, and connections. Here is a detailed explanation of what each function and data structure is doing and how they work together:
+My final dataset, along with alt text, notes that the rendered SVG files look different from the original ones.
 
-1. infer_shape(node_text)
-Purpose: Determine the shape type of a node based on its surrounding brackets in Mermaid syntax.
+This Python code is designed to read Mermaid flowchart descriptions from a CSV file, analyze their structure, and generate an HTML page where each flowchart is rendered with detailed, accessible alt text describing the nodes, their shapes, and the connections.
 
-How it works:
+## How i built this
+I used multiple different regular expression patterns to keep track of nodes, edges, incoming nodes pointing to each node, and outgoing edges from each node to its destination.
 
-If the node text starts and ends with [], it is a rectangle node.
+I also had a function that interprets the shape of a node based on the brackets used in Mermaid syntax.
 
-If it starts and ends with {}, it is a diamond decision node.
+Based on the information gathered about each node—its incoming and outgoing connections—and the function that determines any class definitions or styles, we keep track of the shapes and other properties of each node for later use.
 
-If it uses (), it is an ellipse node.
+We then create a sentence for each node inside an alt_sentence array.
 
-If it starts with > and ends with ], it is a right arrow node.
+Later, we call this function repeatedly to process the Mermaid code in the CSV columns: the Mermaid code itself, the page, and the file name columns. This creates an HTML page that includes the page number, file name, the SVG rendering of each Mermaid diagram, and the alt text for each diagram.
 
-Otherwise, it defaults to just "node".
-
-Use: Helps classify nodes for descriptive alt text.
-
-2. extract_label(node_text)
-Purpose: Remove the shape-defining characters ([]{}()< >) from a node text, leaving only the label inside.
-
-How it works: Uses strip to remove the outer brackets used in Mermaid node definitions.
-
-Use: Provides clean text labels for nodes, ignoring Mermaid syntax.
-
-3. generate_detailed_alt_text(mermaid_code)
-Purpose: Parse the Mermaid flowchart code and generate a detailed, descriptive alt text summary of the flowchart structure.
-
-Step-by-step behavior:
-
-Parsing Lines: Splits the Mermaid code string into separate lines for processing.
-
-Extract Graph Direction: The first line often includes direction info (e.g., graph LR for left-to-right). It extracts this and translates it into readable form like "left to right".
-
-Regex Patterns:
-
-node_pattern matches node definitions, e.g., A[Start] or B{Decision}.
-
-edge_pattern matches edges, possibly labeled, e.g., A --> B or B -- Yes --> C.
-
-Nodes Dictionary: Stores each node's ID (like A) and its label and shape.
-
-Outgoing and Incoming Dictionaries:
-
-outgoing[node_id] lists all edges going out from that node as tuples (target_node, label).
-
-incoming[node_id] lists all nodes that point to it.
-
-Iterate Over Lines: For each line after the first:
-
-Skip lines starting with classDef or class (Mermaid styling lines).
-
-Extract nodes and store them in nodes.
-
-Extract edges and track them in outgoing and incoming.
-
-Alt Text Generation:
-
-States the flowchart orientation.
-
-For each node (sorted by their IDs):
-
-States the node ID, shape, and label.
-
-Lists where it points to (with edge labels if present).
-
-Lists nodes that point to it (incoming).
-
-Returns: A fully concatenated descriptive string summarizing the flowchart for screen readers or other accessible technologies.
-
-Use: Creates accessible descriptions of flowcharts to improve inclusivity.
-
-4. main()
-Purpose: Orchestrates reading Mermaid flowcharts from a CSV file, generating alt text, and producing an HTML file embedding flowcharts with accessible descriptions.
-
-Workflow:
-
-Reads flowcharts.csv expecting columns like mermaid_code, file name, and page.
-
-Prepares a basic HTML template with Mermaid.js included as a script to render the diagrams.
-
-For each CSV row which contains Mermaid code:
-
-Calls generate_detailed_alt_text() to get an alt text description.
-
-Escapes the alt text for safe HTML usage.
-
-Builds an HTML block with:
-
-A title showing file name and page.
-
-A <div> containing the Mermaid diagram with the alt text added as an aria-label for accessibility.
-
-Writes the full HTML file combining all flowcharts from the CSV with descriptions.
-
-Prints a success message.
-
-Explanation of Key Data Structures
-nodes (dict):
-Holds details about each node found in the Mermaid code: key is node ID (e.g., "A"), value is a dictionary with:
-
-"label" - the clean label text extracted from the node,
-
-"shape" - shape type inferred from bracket style.
-
-outgoing (defaultdict(list)):
-Maps each source node ID to a list of tuples (destination_node_id, label) representing the edges going out of that node.
-
-incoming (defaultdict(list)):
-Maps each destination node ID to a list of source node IDs representing edges coming into that node.
-
-alt_sentences (list):
-Temporary array accumulating sentences that describe each part of the flowchart, later joined into a single alt text string.
-
-How They Work Together
-Parsing:
-The generate_detailed_alt_text function processes the raw Mermaid code, breaking it down into nodes and edges and categorizing them.
-
-Mapping Relationships:
-Using outgoing and incoming, it understands graph connectivity from both directions—where nodes lead and where they come from.
-
-Accessibility Text:
-It then constructs human-readable descriptive sentences for each node’s identity and relationships, producing comprehensive alt text.
-
-HTML Generation:
-The main function reads Mermaid codes from CSV, generates alt text per chart, and creates an HTML page that embeds the flowcharts with appropriate aria-labels for screen readers.
-
-Node Shape Inference:
-The helper functions infer_shape and extract_label enable interpreting Mermaid-specific syntax into descriptive language
+This approach enables reading the CSV and then generating an HTML page with all the relevant information. We can then deploy this as a static website that displays the SVG, the title (file name and page it came from), and the descriptive alt text.
 <a href="alt_text_dataset.html">Alt text flowchart dataset</a>
 
 
