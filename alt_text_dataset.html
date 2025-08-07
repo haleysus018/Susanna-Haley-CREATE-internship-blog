@@ -2,1525 +2,458 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<title>Mermaid Flowcharts with Descriptive Alt Text</title>
-<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<title>Flowcharts with Original Images and Descriptive Alt Text</title>
 <style>
   body { font-family: Arial, sans-serif; padding: 20px; }
   .flowchart-container { margin-bottom: 40px; }
   .flowchart-title { font-weight: bold; margin-bottom: 10px; }
+  img { max-width: 100%; height: auto; }
 </style>
 </head>
 <body>
-<h1>Mermaid Flowcharts with Accessible Alt Text</h1>
-<div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node n1 is a ellipse node labeled &#x27;1&#x27;. Node n2 is a ellipse node labeled &#x27;2&#x27;. It points to node n6. Node n3 is a ellipse node labeled &#x27;3&#x27;. Node n4 is a ellipse node labeled &#x27;4&#x27;. Node n5 is a ellipse node labeled &#x27;5&#x27;. It is pointed to by node 0. Node n6 is a ellipse node labeled &#x27;6&#x27;. It is pointed to by nodes n2, 0. Node n7 is a ellipse node labeled &#x27;7&#x27;. It is pointed to by node 0.">
+<h1>Flowcharts with Original Images and Descriptive Alt Text</h1>
+<div class="flowchart-container" role="img" aria-label="The flowchart is oriented left to right. Node 1 is a ellipse node labeled &#x27;1&#x27;. It points to node 2. It is pointed to by node 7. Node 2 is a ellipse node labeled &#x27;2&#x27;. It points to node 6, to node 6. It is pointed to by nodes 1, 3. Node 3 is a ellipse node labeled &#x27;3&#x27;. It points to node 2. It is pointed to by nodes 4, 5. Node 4 is a ellipse node labeled &#x27;4&#x27;. It points to node 3. Node 5 is a ellipse node labeled &#x27;5&#x27;. It points to node 3. It is pointed to by nodes 0, 0. Node 6 is a ellipse node labeled &#x27;6&#x27;. It is pointed to by nodes 2, 0, 0, 2. Node 7 is a ellipse node labeled &#x27;7&#x27;. It points to node 1. It is pointed to by nodes 0, 0.">
 <pre class="flowchart-title">Flowchart from flow1, page 2</pre>
-<div class="mermaid">
-graph TD
-    n1((1)) --> n2((2))
-    n7((7)) --> n1
-    n3((3)) --> n2
-    n2 --> n6((6))
-    n4((4)) --> n3
-    n5((5)) --> n3
-    n4 -- 0 --> n5
-    n5 -- 0 --> n6
-    n6 -- 0 --> n7
-
-    %% Assign bright green to all nodes
-    classDef brightgreen fill:#39FF14,stroke:#178511,stroke-width:2px;
-    class n1,n2,n3,n4,n5,n6,n7 brightgreen;
-
-    %% Style edges
-    %% Red edges for -- 0 -->
-    linkStyle 6 stroke:#FF0000,stroke-width:2px;
-    linkStyle 7 stroke:#FF0000,stroke-width:2px;
-    linkStyle 8 stroke:#FF0000,stroke-width:2px;
-
-    %% Green edges for others
-    linkStyle 0 stroke:#178511,stroke-width:2px;
-    linkStyle 1 stroke:#178511,stroke-width:2px;
-    linkStyle 2 stroke:#178511,stroke-width:2px;
-    linkStyle 3 stroke:#178511,stroke-width:2px;
-    linkStyle 4 stroke:#178511,stroke-width:2px;
-    linkStyle 5 stroke:#178511,stroke-width:2px;
-</div>
+<img src="original_dataset\flow1.png" alt="The flowchart is oriented left to right. Node 1 is a ellipse node labeled &#x27;1&#x27;. It points to node 2. It is pointed to by node 7. Node 2 is a ellipse node labeled &#x27;2&#x27;. It points to node 6, to node 6. It is pointed to by nodes 1, 3. Node 3 is a ellipse node labeled &#x27;3&#x27;. It points to node 2. It is pointed to by nodes 4, 5. Node 4 is a ellipse node labeled &#x27;4&#x27;. It points to node 3. Node 5 is a ellipse node labeled &#x27;5&#x27;. It points to node 3. It is pointed to by nodes 0, 0. Node 6 is a ellipse node labeled &#x27;6&#x27;. It is pointed to by nodes 2, 0, 0, 2. Node 7 is a ellipse node labeled &#x27;7&#x27;. It points to node 1. It is pointed to by nodes 0, 0." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented left to right. Node 1 is a ellipse node labeled &#x27;1&#x27;. It points to node 2. It is pointed to by node 2. Node 2 is a ellipse node labeled &#x27;2&#x27;. It points to node 6, to node 1. It is pointed to by nodes 1, 7. Node 3 is a ellipse node labeled &#x27;3&#x27;. It is pointed to by node 4. Node 5 is a ellipse node labeled &#x27;5&#x27;. Node 6 is a ellipse node labeled &#x27;6&#x27;. It is pointed to by node 2. Node 7 is a ellipse node labeled &#x27;7&#x27;. It points to node 2.">
 <pre class="flowchart-title">Flowchart from flow3, page 4</pre>
-<div class="mermaid">
-graph LR
-    1((1)) -- 1 --> 2((2))
-3((3)) -- 7 --> 2
-5((5)) -- 4 --> 3
-5 -- 2 --> 6((6))
-7((7)) -- 2 --> 1
-
-    %% Neon green for all nodes
-    classDef neon fill:#39FF14,stroke:#39FF14,stroke-width:2px,color:#000;
-    class 1,2,3,5,6,7 neon;
-
-    linkStyle 0 stroke:#A020F0,stroke-width:3px;
-    linkStyle 1 stroke:#A020F0,stroke-width:3px;
-    linkStyle 2 stroke:#A020F0,stroke-width:3px;
-    linkStyle 3 stroke:#A020F0,stroke-width:3px;
-    linkStyle 4 stroke:#A020F0,stroke-width:3px;
-</div>
+<img src="original_dataset\flow3.png" alt="The flowchart is oriented left to right. Node 1 is a ellipse node labeled &#x27;1&#x27;. It points to node 2. It is pointed to by node 2. Node 2 is a ellipse node labeled &#x27;2&#x27;. It points to node 6, to node 1. It is pointed to by nodes 1, 7. Node 3 is a ellipse node labeled &#x27;3&#x27;. It is pointed to by node 4. Node 5 is a ellipse node labeled &#x27;5&#x27;. Node 6 is a ellipse node labeled &#x27;6&#x27;. It is pointed to by node 2. Node 7 is a ellipse node labeled &#x27;7&#x27;. It points to node 2." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node 1 is a ellipse node labeled &#x27;1&#x27;. Node 2 is a ellipse node labeled &#x27;2&#x27;. Node 3 is a ellipse node labeled &#x27;3&#x27;. It points to node 4. Node 4 is a ellipse node labeled &#x27;4&#x27;. It is pointed to by node 3. Node 5 is a ellipse node labeled &#x27;5&#x27;. Node 6 is a ellipse node labeled &#x27;6&#x27;. Node 7 is a ellipse node labeled &#x27;7&#x27;.">
 <pre class="flowchart-title">Flowchart from flow4, page 5</pre>
-<div class="mermaid">
-graph TD
-1((1)) ----> 2((2))
-7((7)) ----> 1
-3((3)) --> 2
-2((2)) --> 6((6))
-3 --> 4((4))
-5((5)) --> 3
-
-    %% Define green style for nodes
-    classDef greenNode fill:#39FF14,stroke:#2F8F17,stroke-width:2px,color:#000;
-    class 1,2,3,4,5,6,7 greenNode;
-
-    %% Define red color for all arrows
-    linkStyle default stroke:#FF0000,stroke-width:2px;
-
-    %% Style all arrows purple
-    linkStyle 0 stroke:#800080,stroke-width:2px;
-    linkStyle 1 stroke:#800080,stroke-width:2px;
-    linkStyle 2 stroke:#800080,stroke-width:2px;
-    linkStyle 3 stroke:#800080,stroke-width:2px;
-    linkStyle 4 stroke:#800080,stroke-width:2px;
-    linkStyle 5 stroke:#800080,stroke-width:2px;
-</div>
+<img src="original_dataset\flow4.png" alt="The flowchart is oriented top to bottom. Node 1 is a ellipse node labeled &#x27;1&#x27;. Node 2 is a ellipse node labeled &#x27;2&#x27;. Node 3 is a ellipse node labeled &#x27;3&#x27;. It points to node 4. Node 4 is a ellipse node labeled &#x27;4&#x27;. It is pointed to by node 3. Node 5 is a ellipse node labeled &#x27;5&#x27;. Node 6 is a ellipse node labeled &#x27;6&#x27;. Node 7 is a ellipse node labeled &#x27;7&#x27;." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node 1 is a ellipse node labeled &#x27;1&#x27;. Node 2 is a ellipse node labeled &#x27;2&#x27;. Node 3 is a ellipse node labeled &#x27;3&#x27;. Node 4 is a ellipse node labeled &#x27;4&#x27;. Node 5 is a ellipse node labeled &#x27;5&#x27;. Node 6 is a ellipse node labeled &#x27;6&#x27;. Node 7 is a ellipse node labeled &#x27;7&#x27;.">
 <pre class="flowchart-title">Flowchart from flow5, page 7</pre>
-<div class="mermaid">
-graph TD
-    1((1)) ----> 2((2))
-    7((7)) ----> 1
-    3((3)) --> 2((2))
-    2((2)) --> 6((6))
-    4((4)) --> 3((3))
-    5((5)) --> 6((6))
-
-    %% Define green node style
-    classDef greenNodes fill:#39FF14,stroke:#0b0,stroke-width:2px,color:#000;
-    class 1,2,3,5,6,7 greenNodes;
-
-    %% Define red arrows style for all links
-    linkStyle 0 stroke:#FF0000,stroke-width:2px;
-    linkStyle 1 stroke:#FF0000,stroke-width:2px;
-    linkStyle 2 stroke:#FF0000,stroke-width:2px;
-    linkStyle 3 stroke:#FF0000,stroke-width:2px;
-    linkStyle 4 stroke:#FF0000,stroke-width:2px;
-    linkStyle 5 stroke:#FF0000,stroke-width:2px;
-</div>
+<img src="original_dataset\flow5.png" alt="The flowchart is oriented top to bottom. Node 1 is a ellipse node labeled &#x27;1&#x27;. Node 2 is a ellipse node labeled &#x27;2&#x27;. Node 3 is a ellipse node labeled &#x27;3&#x27;. Node 4 is a ellipse node labeled &#x27;4&#x27;. Node 5 is a ellipse node labeled &#x27;5&#x27;. Node 6 is a ellipse node labeled &#x27;6&#x27;. Node 7 is a ellipse node labeled &#x27;7&#x27;." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node 1 is a ellipse node labeled &#x27;1&#x27;. Node 2 is a ellipse node labeled &#x27;2&#x27;. Node 3 is a ellipse node labeled &#x27;3&#x27;. Node 4 is a ellipse node labeled &#x27;4&#x27;. Node 5 is a ellipse node labeled &#x27;5&#x27;. Node 6 is a ellipse node labeled &#x27;6&#x27;. Node 7 is a ellipse node labeled &#x27;7&#x27;.">
 <pre class="flowchart-title">Flowchart from flow6, page 8</pre>
-<div class="mermaid">
-graph TD
-1((1)) ----> 2((2))
-7((7)) ----> 1((1))
-3((3)) --> 2((2))
-2((2)) --> 6((6))
-3((3)) --> 4((4))
-5((5)) --> 3((3))
-    %% Define green nodes
-    classDef greenNodes fill:#39FF14,stroke:#116611,stroke-width:2px,color:#000;
-    class 1,2,3,4,5,6,7 greenNodes;
-
-    %% Style all arrows purple
-    linkStyle 0 stroke:#800080,stroke-width:3px;
-    linkStyle 1 stroke:#800080,stroke-width:3px;
-    linkStyle 2 stroke:#800080,stroke-width:3px;
-    linkStyle 3 stroke:#800080,stroke-width:3px;
-    linkStyle 4 stroke:#800080,stroke-width:3px;
-    linkStyle 5 stroke:#800080,stroke-width:3px;
-</div>
+<img src="original_dataset\flow6.png" alt="The flowchart is oriented top to bottom. Node 1 is a ellipse node labeled &#x27;1&#x27;. Node 2 is a ellipse node labeled &#x27;2&#x27;. Node 3 is a ellipse node labeled &#x27;3&#x27;. Node 4 is a ellipse node labeled &#x27;4&#x27;. Node 5 is a ellipse node labeled &#x27;5&#x27;. Node 6 is a ellipse node labeled &#x27;6&#x27;. Node 7 is a ellipse node labeled &#x27;7&#x27;." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node A is a ellipse node labeled &#x27;&quot;C/C++ model&quot;&#x27;. Node B is a rectangle node labeled &#x27;&quot;Functional Verification&quot;&#x27;. It points &#x27;bugs&#x27; to node C. It is pointed to by nodes G, F, E, C, D. Node C is a ellipse node labeled &#x27;&quot;Verilog RTL&quot;&#x27;. It points to node D, to node B. It is pointed to by node B. Node D is a rectangle node labeled &#x27;&quot;synthesis&quot;&#x27;. It points to node E, &#x27;timing &amp; area\nviolations&#x27; to node B. It is pointed to by node C. Node E is a ellipse node labeled &#x27;&quot;netlist&quot;&#x27;. It points to node F, to node B. It is pointed to by node D. Node F is a rectangle node labeled &#x27;&quot;place &amp; route&quot;&#x27;. It points to node G, to node B. It is pointed to by node E. Node G is a ellipse node labeled &#x27;&quot;final netlist&quot;&#x27;. It points to node H, to node B. It is pointed to by node F. Node H is a rectangle node labeled &#x27;&quot;Physical design&quot;&#x27;. It points to node I. It is pointed to by node G. Node I is a ellipse node labeled &#x27;&quot;Tapeout&quot;&#x27;. It is pointed to by node H.">
 <pre class="flowchart-title">Flowchart from flow7, page 1</pre>
-<div class="mermaid">
-graph TD
-
-%% Nodes with shapes and labels
-A(("C/C++ model"))
-B["Functional Verification"]
-C(("Verilog RTL"))
-D["synthesis"]
-E(("netlist"))
-F["place & route"]
-G(("final netlist"))
-H["Physical design"]
-I(("Tapeout"))
-
-%% Edges with labels and styles
-A -.->|by hand| C
-B -->|bugs| C
-C --> D
-D --> E
-E --> F
-F --> G
-G --> H
-H --> I
-G --> B
-F --> B
-E --> B
-C --> B
-D -->|timing & area\nviolations| B
-
-%% Node styles
-classDef redOval fill:none,stroke:red,stroke-width:2px,color:black,font-style:italic;
-classDef greenBox fill:#7A8450,stroke:#42622F,stroke-width:1px,color:white,font-style:italic,font-weight:bold;
-classDef purpleBox fill:#7B5C76,stroke:#442D46,stroke-width:1px,color:white,font-style:italic,font-weight:bold;
-classDef whiteOval fill:none,stroke:black,color:black,font-style:italic;
-
-class A redOval
-class B greenBox
-class D greenBox
-class F greenBox
-class H purpleBox
-class C,E,G,I whiteOval
-
-%% Style the first edge (the dashed arrow) red with dashed stroke
-linkStyle 0 stroke:red,stroke-width:2px,stroke-dasharray: 5 5
-</div>
+<img src="original_dataset\flow7.png" alt="The flowchart is oriented top to bottom. Node A is a ellipse node labeled &#x27;&quot;C/C++ model&quot;&#x27;. Node B is a rectangle node labeled &#x27;&quot;Functional Verification&quot;&#x27;. It points &#x27;bugs&#x27; to node C. It is pointed to by nodes G, F, E, C, D. Node C is a ellipse node labeled &#x27;&quot;Verilog RTL&quot;&#x27;. It points to node D, to node B. It is pointed to by node B. Node D is a rectangle node labeled &#x27;&quot;synthesis&quot;&#x27;. It points to node E, &#x27;timing &amp; area\nviolations&#x27; to node B. It is pointed to by node C. Node E is a ellipse node labeled &#x27;&quot;netlist&quot;&#x27;. It points to node F, to node B. It is pointed to by node D. Node F is a rectangle node labeled &#x27;&quot;place &amp; route&quot;&#x27;. It points to node G, to node B. It is pointed to by node E. Node G is a ellipse node labeled &#x27;&quot;final netlist&quot;&#x27;. It points to node H, to node B. It is pointed to by node F. Node H is a rectangle node labeled &#x27;&quot;Physical design&quot;&#x27;. It points to node I. It is pointed to by node G. Node I is a ellipse node labeled &#x27;&quot;Tapeout&quot;&#x27;. It is pointed to by node H." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node A is a rectangle node labeled &#x27;&quot;Source code&quot;&#x27;. It points &#x27;Level 1 compilation&#x27; to node B. Node B is a rectangle node labeled &#x27;&quot;Intermediate form:&lt;br&gt;Rules and Actions&lt;br&gt;(Term Rewriting System)&quot;&#x27;. It points &#x27;Level 2 compilation&#x27; to node C. It is pointed to by node A. Node C is a rectangle node labeled &#x27;&quot;Object code&lt;br&gt;(Verilog/C)&quot;&#x27;. It is pointed to by node B.">
 <pre class="flowchart-title">Flowchart from flow8, page 11</pre>
-<div class="mermaid">
-graph TD
-
-%% Main nodes with labels and line breaks
-A["Source code"]
-B["Intermediate form:<br>Rules and Actions<br>(Term Rewriting System)"]
-C["Object code<br>(Verilog/C)"]
-
-%% Main flow arrows with labels
-A -->|Level 1 compilation| B
-B -->|Level 2 compilation| C
-
-%% Styling main nodes
-classDef mainNode fill:#7A8450,stroke:#42622F,stroke-width:1px,color:white,font-style:italic,font-weight:bold;
-
-class A,B,C mainNode
-
-%% Styling arrows
-linkStyle 0 stroke:#000,stroke-width:1.5px
-linkStyle 1 stroke:#000,stroke-width:1.5px
-</div>
+<img src="original_dataset\flow8.png" alt="The flowchart is oriented top to bottom. Node A is a rectangle node labeled &#x27;&quot;Source code&quot;&#x27;. It points &#x27;Level 1 compilation&#x27; to node B. Node B is a rectangle node labeled &#x27;&quot;Intermediate form:&lt;br&gt;Rules and Actions&lt;br&gt;(Term Rewriting System)&quot;&#x27;. It points &#x27;Level 2 compilation&#x27; to node C. It is pointed to by node A. Node C is a rectangle node labeled &#x27;&quot;Object code&lt;br&gt;(Verilog/C)&quot;&#x27;. It is pointed to by node B." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node A is a diamond decision node labeled &#x27;A&#x27;. It is pointed to by node x. Node B is a diamond decision node labeled &#x27;B&#x27;. It is pointed to by node x. Node C is a diamond decision node labeled &#x27;C&#x27;. It is pointed to by node y. Node x is a ellipse node labeled &#x27;x&#x27;. It points to node A, to node B. Node y is a ellipse node labeled &#x27;y&#x27;. It points to node C.">
 <pre class="flowchart-title">Flowchart from flow9, page 6</pre>
-<div class="mermaid">
-graph TD 
-y((y)) --> x((x)) 
-y --> C{C}
-x --> A{A}
- x --> B{B}
-</div>
+<img src="original_dataset\flow9.png" alt="The flowchart is oriented top to bottom. Node A is a diamond decision node labeled &#x27;A&#x27;. It is pointed to by node x. Node B is a diamond decision node labeled &#x27;B&#x27;. It is pointed to by node x. Node C is a diamond decision node labeled &#x27;C&#x27;. It is pointed to by node y. Node x is a ellipse node labeled &#x27;x&#x27;. It points to node A, to node B. Node y is a ellipse node labeled &#x27;y&#x27;. It points to node C." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node A is a diamond decision node labeled &#x27;A&#x27;. Node B is a diamond decision node labeled &#x27;B&#x27;. It is pointed to by node y. Node C is a diamond decision node labeled &#x27;C&#x27;. It is pointed to by node y. Node x is a ellipse node labeled &#x27;x&#x27;. It points to node y. Node y is a ellipse node labeled &#x27;y&#x27;. It points to node B, to node C. It is pointed to by node x.">
 <pre class="flowchart-title">Flowchart from flow10, page 6</pre>
-<div class="mermaid">
-graph TD 
-x((x)) --> A{A}
- x --> y((y))
- y --> B{B}
- y --> C{C}
-</div>
+<img src="original_dataset\flow10.png" alt="The flowchart is oriented top to bottom. Node A is a diamond decision node labeled &#x27;A&#x27;. Node B is a diamond decision node labeled &#x27;B&#x27;. It is pointed to by node y. Node C is a diamond decision node labeled &#x27;C&#x27;. It is pointed to by node y. Node x is a ellipse node labeled &#x27;x&#x27;. It points to node y. Node y is a ellipse node labeled &#x27;y&#x27;. It points to node B, to node C. It is pointed to by node x." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node a is a ellipse node labeled &#x27;a&#x27;. Node b is a ellipse node labeled &#x27;b&#x27;. Node c is a ellipse node labeled &#x27;c&#x27;. Node d is a ellipse node labeled &#x27;d&#x27;. Node e is a ellipse node labeled &#x27;e&#x27;. Node f is a ellipse node labeled &#x27;f&#x27;. Node g is a ellipse node labeled &#x27;g&#x27;. Node h is a ellipse node labeled &#x27;h&#x27;. Node i is a ellipse node labeled &#x27;i&#x27;. Node j is a ellipse node labeled &#x27;j&#x27;. Node k is a ellipse node labeled &#x27;k&#x27;. Node l is a ellipse node labeled &#x27;l&#x27;.">
 <pre class="flowchart-title">Flowchart from flow11, page 3</pre>
-<div class="mermaid">
-graph TD
-d((d)) --> c((c))
-d((d)) --> k((k))
-d((d)) --> l((l))
-c((c)) --> b((b))
-c((c)) --> h((h))
-b((b)) --> a((a))
-h((h)) --> g((g))
-g((g)) --> f((f))
-f((f)) --> e((e))
-f((f)) --> j((j))
-j((j)) --> i((i))
-</div>
+<img src="original_dataset\flow11.png" alt="The flowchart is oriented top to bottom. Node a is a ellipse node labeled &#x27;a&#x27;. Node b is a ellipse node labeled &#x27;b&#x27;. Node c is a ellipse node labeled &#x27;c&#x27;. Node d is a ellipse node labeled &#x27;d&#x27;. Node e is a ellipse node labeled &#x27;e&#x27;. Node f is a ellipse node labeled &#x27;f&#x27;. Node g is a ellipse node labeled &#x27;g&#x27;. Node h is a ellipse node labeled &#x27;h&#x27;. Node i is a ellipse node labeled &#x27;i&#x27;. Node j is a ellipse node labeled &#x27;j&#x27;. Node k is a ellipse node labeled &#x27;k&#x27;. Node l is a ellipse node labeled &#x27;l&#x27;." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node a is a ellipse node labeled &#x27;a&#x27;. Node b is a ellipse node labeled &#x27;b&#x27;. Node c is a ellipse node labeled &#x27;c&#x27;. Node d is a ellipse node labeled &#x27;d&#x27;. Node e is a ellipse node labeled &#x27;e&#x27;. Node f is a ellipse node labeled &#x27;f&#x27;. Node g is a ellipse node labeled &#x27;g&#x27;. Node h is a ellipse node labeled &#x27;h&#x27;. Node i is a ellipse node labeled &#x27;i&#x27;. Node j is a ellipse node labeled &#x27;j&#x27;. Node k is a ellipse node labeled &#x27;k&#x27;. Node l is a ellipse node labeled &#x27;l&#x27;.">
 <pre class="flowchart-title">Flowchart from flow12, page 3</pre>
-<div class="mermaid">
-graph TD
-b((b)) --> a((a))
-b((b)) --> d((d))
-d((d)) ---> l((l))
-d((d)) ---> k((k))
-d((d)) --> c((c))
-c((c)) ---> g((g))
-g((g)) --> e((e))
-g((g)) --> h((h))
-e((e)) --> f((f))
-f((f)) ---> i((i))
-i((i)) --> j((j))
-</div>
+<img src="original_dataset\flow12.png" alt="The flowchart is oriented top to bottom. Node a is a ellipse node labeled &#x27;a&#x27;. Node b is a ellipse node labeled &#x27;b&#x27;. Node c is a ellipse node labeled &#x27;c&#x27;. Node d is a ellipse node labeled &#x27;d&#x27;. Node e is a ellipse node labeled &#x27;e&#x27;. Node f is a ellipse node labeled &#x27;f&#x27;. Node g is a ellipse node labeled &#x27;g&#x27;. Node h is a ellipse node labeled &#x27;h&#x27;. Node i is a ellipse node labeled &#x27;i&#x27;. Node j is a ellipse node labeled &#x27;j&#x27;. Node k is a ellipse node labeled &#x27;k&#x27;. Node l is a ellipse node labeled &#x27;l&#x27;." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node a is a ellipse node labeled &#x27;a&#x27;. Node b is a ellipse node labeled &#x27;b&#x27;. Node c is a ellipse node labeled &#x27;c&#x27;. Node d is a ellipse node labeled &#x27;d&#x27;. Node e is a ellipse node labeled &#x27;e&#x27;. Node f is a ellipse node labeled &#x27;f&#x27;. Node g is a ellipse node labeled &#x27;g&#x27;. Node h is a ellipse node labeled &#x27;h&#x27;. Node i is a ellipse node labeled &#x27;i&#x27;. Node j is a ellipse node labeled &#x27;j&#x27;. Node k is a ellipse node labeled &#x27;k&#x27;. Node l is a ellipse node labeled &#x27;l&#x27;.">
 <pre class="flowchart-title">Flowchart from flow13, page 4</pre>
-<div class="mermaid">
-graph TD
-c((c)) --> b((b))
-c((c)) ---> f((f))
-c((c)) --> d((d))
-b((b)) --> a((a))
-f((f)) --> e((e))
-f((f)) ---> j((j))
-f((f)) --> g((g))
-j((j)) --> i((i))
-g((g)) --> h((h))
-d((d)) ---> l((l))
-d((d)) --> k((k))
-</div>
+<img src="original_dataset\flow13.png" alt="The flowchart is oriented top to bottom. Node a is a ellipse node labeled &#x27;a&#x27;. Node b is a ellipse node labeled &#x27;b&#x27;. Node c is a ellipse node labeled &#x27;c&#x27;. Node d is a ellipse node labeled &#x27;d&#x27;. Node e is a ellipse node labeled &#x27;e&#x27;. Node f is a ellipse node labeled &#x27;f&#x27;. Node g is a ellipse node labeled &#x27;g&#x27;. Node h is a ellipse node labeled &#x27;h&#x27;. Node i is a ellipse node labeled &#x27;i&#x27;. Node j is a ellipse node labeled &#x27;j&#x27;. Node k is a ellipse node labeled &#x27;k&#x27;. Node l is a ellipse node labeled &#x27;l&#x27;." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node a is a ellipse node labeled &#x27;a&#x27;. Node b is a ellipse node labeled &#x27;b&#x27;. Node c is a ellipse node labeled &#x27;c&#x27;. Node d is a ellipse node labeled &#x27;d&#x27;. Node e is a ellipse node labeled &#x27;e&#x27;. Node f is a ellipse node labeled &#x27;f&#x27;. Node g is a ellipse node labeled &#x27;g&#x27;. Node h is a ellipse node labeled &#x27;h&#x27;. Node i is a ellipse node labeled &#x27;i&#x27;. Node j is a ellipse node labeled &#x27;j&#x27;. Node k is a ellipse node labeled &#x27;k&#x27;. Node l is a ellipse node labeled &#x27;l&#x27;.">
 <pre class="flowchart-title">Flowchart from flow14, page 5</pre>
-<div class="mermaid">
-graph TD
-c((c)) --> f((f))
-c((c)) ---> b((b))
-c((c)) --> d((d))
-f((f)) --> j((j))
-f((f)) ---> e((e))
-f((f)) --> g((g))
-j((j)) --> i((i))
-g((g)) --> h((h))
-b((b)) --> a((a))
-d((d)) ---> l((l))
-d((d)) --> k((k))
-</div>
+<img src="original_dataset\flow14.png" alt="The flowchart is oriented top to bottom. Node a is a ellipse node labeled &#x27;a&#x27;. Node b is a ellipse node labeled &#x27;b&#x27;. Node c is a ellipse node labeled &#x27;c&#x27;. Node d is a ellipse node labeled &#x27;d&#x27;. Node e is a ellipse node labeled &#x27;e&#x27;. Node f is a ellipse node labeled &#x27;f&#x27;. Node g is a ellipse node labeled &#x27;g&#x27;. Node h is a ellipse node labeled &#x27;h&#x27;. Node i is a ellipse node labeled &#x27;i&#x27;. Node j is a ellipse node labeled &#x27;j&#x27;. Node k is a ellipse node labeled &#x27;k&#x27;. Node l is a ellipse node labeled &#x27;l&#x27;." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node a is a ellipse node labeled &#x27;a&#x27;. Node b is a ellipse node labeled &#x27;b&#x27;. Node c is a ellipse node labeled &#x27;c&#x27;. Node d is a ellipse node labeled &#x27;d&#x27;. Node e is a ellipse node labeled &#x27;e&#x27;. Node f is a ellipse node labeled &#x27;f&#x27;. Node g is a ellipse node labeled &#x27;g&#x27;. Node h is a ellipse node labeled &#x27;h&#x27;. Node i is a ellipse node labeled &#x27;i&#x27;. Node j is a ellipse node labeled &#x27;j&#x27;. Node k is a ellipse node labeled &#x27;k&#x27;. Node l is a ellipse node labeled &#x27;l&#x27;.">
 <pre class="flowchart-title">Flowchart from flow15, page 5</pre>
-<div class="mermaid">
-graph TD
-j((j)) --> i((i))
-j((j)) --> f((f))
-f((f)) ---> e((e))
-f((f)) --> c((c))
-c((c)) --> g((g))
-c((c)) ---> b((b))
-c((c)) --> d((d))
-g((g)) --> h((h))
-b((b)) --> a((a))
-d((d)) --> l((l))
-d((d)) --> k((k))
-</div>
+<img src="original_dataset\flow15.png" alt="The flowchart is oriented top to bottom. Node a is a ellipse node labeled &#x27;a&#x27;. Node b is a ellipse node labeled &#x27;b&#x27;. Node c is a ellipse node labeled &#x27;c&#x27;. Node d is a ellipse node labeled &#x27;d&#x27;. Node e is a ellipse node labeled &#x27;e&#x27;. Node f is a ellipse node labeled &#x27;f&#x27;. Node g is a ellipse node labeled &#x27;g&#x27;. Node h is a ellipse node labeled &#x27;h&#x27;. Node i is a ellipse node labeled &#x27;i&#x27;. Node j is a ellipse node labeled &#x27;j&#x27;. Node k is a ellipse node labeled &#x27;k&#x27;. Node l is a ellipse node labeled &#x27;l&#x27;." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node 1 is a ellipse node labeled &#x27;1&#x27;. Node 10 is a ellipse node labeled &#x27;10&#x27;. Node 11 is a ellipse node labeled &#x27;11&#x27;. Node 12 is a ellipse node labeled &#x27;12&#x27;. Node 13 is a ellipse node labeled &#x27;13&#x27;. Node 14 is a ellipse node labeled &#x27;14&#x27;. Node 15 is a ellipse node labeled &#x27;15&#x27;. Node 16 is a ellipse node labeled &#x27;16&#x27;. Node 2 is a ellipse node labeled &#x27;2&#x27;. Node 3 is a ellipse node labeled &#x27;3&#x27;. Node 4 is a ellipse node labeled &#x27;4&#x27;. Node 5 is a ellipse node labeled &#x27;5&#x27;. Node 6 is a ellipse node labeled &#x27;6&#x27;. Node 7 is a ellipse node labeled &#x27;7&#x27;. Node 8 is a ellipse node labeled &#x27;8&#x27;. Node 9 is a ellipse node labeled &#x27;9&#x27;.">
 <pre class="flowchart-title">Flowchart from flow16, page 3</pre>
-<div class="mermaid">
-graph TD
-2((2))--->1((1))
-2--->8((8))
-2--->3((3))
-8--->7((7))
-8--->9((9))
-7--->10((10))
-3--->5((5))
-5--->4((4))
-5--->12((12))
-5--->14((14))
-5--->6((6))
-12--->11((11))
-12--->13((13))
-11--->16((16))
-16--->15((15))
-</div>
+<img src="original_dataset\flow16.png" alt="The flowchart is oriented top to bottom. Node 1 is a ellipse node labeled &#x27;1&#x27;. Node 10 is a ellipse node labeled &#x27;10&#x27;. Node 11 is a ellipse node labeled &#x27;11&#x27;. Node 12 is a ellipse node labeled &#x27;12&#x27;. Node 13 is a ellipse node labeled &#x27;13&#x27;. Node 14 is a ellipse node labeled &#x27;14&#x27;. Node 15 is a ellipse node labeled &#x27;15&#x27;. Node 16 is a ellipse node labeled &#x27;16&#x27;. Node 2 is a ellipse node labeled &#x27;2&#x27;. Node 3 is a ellipse node labeled &#x27;3&#x27;. Node 4 is a ellipse node labeled &#x27;4&#x27;. Node 5 is a ellipse node labeled &#x27;5&#x27;. Node 6 is a ellipse node labeled &#x27;6&#x27;. Node 7 is a ellipse node labeled &#x27;7&#x27;. Node 8 is a ellipse node labeled &#x27;8&#x27;. Node 9 is a ellipse node labeled &#x27;9&#x27;." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node 1 is a ellipse node labeled &#x27;1&#x27;. Node 10 is a ellipse node labeled &#x27;10&#x27;. Node 11 is a ellipse node labeled &#x27;11&#x27;. Node 12 is a ellipse node labeled &#x27;12&#x27;. Node 13 is a ellipse node labeled &#x27;13&#x27;. Node 14 is a ellipse node labeled &#x27;14&#x27;. Node 15 is a ellipse node labeled &#x27;15&#x27;. Node 16 is a ellipse node labeled &#x27;16&#x27;. Node 2 is a ellipse node labeled &#x27;2&#x27;. Node 3 is a ellipse node labeled &#x27;3&#x27;. Node 4 is a ellipse node labeled &#x27;4&#x27;. Node 5 is a ellipse node labeled &#x27;5&#x27;. Node 6 is a ellipse node labeled &#x27;6&#x27;. Node 7 is a ellipse node labeled &#x27;7&#x27;. Node 8 is a ellipse node labeled &#x27;8&#x27;. Node 9 is a ellipse node labeled &#x27;9&#x27;.">
 <pre class="flowchart-title">Flowchart from flow17, page 3</pre>
-<div class="mermaid">
-graph TD
-6((6)) --> 5((5))
-5((5)) --->14((14))
-5((5)) --->13((13))
-5((5)) --> 4((4))
-4((4)) --> 3((3))
-3((3)) --> 2((2))
-2((2)) ---> 9((9))
-2((2)) --> 1((1))
-13((13)) --> 12((12))
-12((12)) --> 11((11))
-11((11)) ---> 16((16))
-16((16)) --> 15((15))
-9((9)) --> 8((8))
-8((8)) --> 7((7))
-7((7)) ---> 10((10))
-</div>
+<img src="original_dataset\flow17.png" alt="The flowchart is oriented top to bottom. Node 1 is a ellipse node labeled &#x27;1&#x27;. Node 10 is a ellipse node labeled &#x27;10&#x27;. Node 11 is a ellipse node labeled &#x27;11&#x27;. Node 12 is a ellipse node labeled &#x27;12&#x27;. Node 13 is a ellipse node labeled &#x27;13&#x27;. Node 14 is a ellipse node labeled &#x27;14&#x27;. Node 15 is a ellipse node labeled &#x27;15&#x27;. Node 16 is a ellipse node labeled &#x27;16&#x27;. Node 2 is a ellipse node labeled &#x27;2&#x27;. Node 3 is a ellipse node labeled &#x27;3&#x27;. Node 4 is a ellipse node labeled &#x27;4&#x27;. Node 5 is a ellipse node labeled &#x27;5&#x27;. Node 6 is a ellipse node labeled &#x27;6&#x27;. Node 7 is a ellipse node labeled &#x27;7&#x27;. Node 8 is a ellipse node labeled &#x27;8&#x27;. Node 9 is a ellipse node labeled &#x27;9&#x27;." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node 1 is a ellipse node labeled &#x27;1&#x27;. Node 10 is a ellipse node labeled &#x27;10&#x27;. Node 11 is a ellipse node labeled &#x27;11&#x27;. Node 12 is a ellipse node labeled &#x27;12&#x27;. Node 13 is a ellipse node labeled &#x27;13&#x27;. Node 14 is a ellipse node labeled &#x27;14&#x27;. Node 15 is a ellipse node labeled &#x27;15&#x27;. Node 16 is a ellipse node labeled &#x27;16&#x27;. Node 2 is a ellipse node labeled &#x27;2&#x27;. Node 3 is a ellipse node labeled &#x27;3&#x27;. Node 4 is a ellipse node labeled &#x27;4&#x27;. Node 5 is a ellipse node labeled &#x27;5&#x27;. Node 6 is a ellipse node labeled &#x27;6&#x27;. Node 7 is a ellipse node labeled &#x27;7&#x27;. Node 8 is a ellipse node labeled &#x27;8&#x27;. Node 9 is a ellipse node labeled &#x27;9&#x27;.">
 <pre class="flowchart-title">Flowchart from flow18, page 4</pre>
-<div class="mermaid">
-graph TD
-2((2)) --> 1((1))
-2((2)) ---> 8((8))
-2((2)) --> 3((3))
-8((8)) --> 7((7))
-8((8)) --> 9((9))
-7((7)) ---> 10((10))
-3((3)) --> 5((5))
-5((5)) --> 4((4))
-5((5)) ---> 11((11))
-5((5)) ---> 14((14))
-5((5)) --> 6((6))
-11((11)) --> 15((15))
-11((11)) --> 12((12))
-15((15)) --> 16((16))
-12((12)) --> 13((13))
-</div>
+<img src="original_dataset\flow18.png" alt="The flowchart is oriented top to bottom. Node 1 is a ellipse node labeled &#x27;1&#x27;. Node 10 is a ellipse node labeled &#x27;10&#x27;. Node 11 is a ellipse node labeled &#x27;11&#x27;. Node 12 is a ellipse node labeled &#x27;12&#x27;. Node 13 is a ellipse node labeled &#x27;13&#x27;. Node 14 is a ellipse node labeled &#x27;14&#x27;. Node 15 is a ellipse node labeled &#x27;15&#x27;. Node 16 is a ellipse node labeled &#x27;16&#x27;. Node 2 is a ellipse node labeled &#x27;2&#x27;. Node 3 is a ellipse node labeled &#x27;3&#x27;. Node 4 is a ellipse node labeled &#x27;4&#x27;. Node 5 is a ellipse node labeled &#x27;5&#x27;. Node 6 is a ellipse node labeled &#x27;6&#x27;. Node 7 is a ellipse node labeled &#x27;7&#x27;. Node 8 is a ellipse node labeled &#x27;8&#x27;. Node 9 is a ellipse node labeled &#x27;9&#x27;." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node 1 is a ellipse node labeled &#x27;1&#x27;. Node 10 is a ellipse node labeled &#x27;10&#x27;. Node 11 is a ellipse node labeled &#x27;11&#x27;. Node 12 is a ellipse node labeled &#x27;12&#x27;. Node 13 is a ellipse node labeled &#x27;13&#x27;. Node 14 is a ellipse node labeled &#x27;14&#x27;. Node 15 is a ellipse node labeled &#x27;15&#x27;. Node 16 is a ellipse node labeled &#x27;16&#x27;. Node 2 is a ellipse node labeled &#x27;2&#x27;. Node 3 is a ellipse node labeled &#x27;3&#x27;. Node 4 is a ellipse node labeled &#x27;4&#x27;. Node 5 is a ellipse node labeled &#x27;5&#x27;. Node 6 is a ellipse node labeled &#x27;6&#x27;. Node 7 is a ellipse node labeled &#x27;7&#x27;. Node 8 is a ellipse node labeled &#x27;8&#x27;. Node 9 is a ellipse node labeled &#x27;9&#x27;.">
 <pre class="flowchart-title">Flowchart from flow19, page 4</pre>
-<div class="mermaid">
-graph TD
-5((5)) --> 3((3))
-5((5)) ---> 11((11))
-5((5)) ---> 14((14))
-5((5)) --> 6((6))
-3((3)) --> 2((2))
-3((3)) --> 4((4))
-2((2)) --> 1((1))
-2((2)) ---> 8((8))
-8((8)) --> 7((7))
-8((8)) --> 9((9))
-7((7)) ---> 10((10))
-11((11)) --> 15((15))
-11((11)) --> 12((12))
-15((15)) --> 16((16))
-12((12)) --> 13((13))
-</div>
+<img src="original_dataset\flow19.png" alt="The flowchart is oriented top to bottom. Node 1 is a ellipse node labeled &#x27;1&#x27;. Node 10 is a ellipse node labeled &#x27;10&#x27;. Node 11 is a ellipse node labeled &#x27;11&#x27;. Node 12 is a ellipse node labeled &#x27;12&#x27;. Node 13 is a ellipse node labeled &#x27;13&#x27;. Node 14 is a ellipse node labeled &#x27;14&#x27;. Node 15 is a ellipse node labeled &#x27;15&#x27;. Node 16 is a ellipse node labeled &#x27;16&#x27;. Node 2 is a ellipse node labeled &#x27;2&#x27;. Node 3 is a ellipse node labeled &#x27;3&#x27;. Node 4 is a ellipse node labeled &#x27;4&#x27;. Node 5 is a ellipse node labeled &#x27;5&#x27;. Node 6 is a ellipse node labeled &#x27;6&#x27;. Node 7 is a ellipse node labeled &#x27;7&#x27;. Node 8 is a ellipse node labeled &#x27;8&#x27;. Node 9 is a ellipse node labeled &#x27;9&#x27;." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node 1 is a ellipse node labeled &#x27;1&#x27;. Node 10 is a ellipse node labeled &#x27;10&#x27;. Node 11 is a ellipse node labeled &#x27;11&#x27;. Node 12 is a ellipse node labeled &#x27;12&#x27;. Node 13 is a ellipse node labeled &#x27;13&#x27;. Node 14 is a ellipse node labeled &#x27;14&#x27;. Node 15 is a ellipse node labeled &#x27;15&#x27;. Node 16 is a ellipse node labeled &#x27;16&#x27;. Node 2 is a ellipse node labeled &#x27;2&#x27;. Node 3 is a ellipse node labeled &#x27;3&#x27;. Node 4 is a ellipse node labeled &#x27;4&#x27;. Node 5 is a ellipse node labeled &#x27;5&#x27;. Node 6 is a ellipse node labeled &#x27;6&#x27;. Node 7 is a ellipse node labeled &#x27;7&#x27;. Node 8 is a ellipse node labeled &#x27;8&#x27;. Node 9 is a ellipse node labeled &#x27;9&#x27;.">
 <pre class="flowchart-title">Flowchart from flow20, page 5</pre>
-<div class="mermaid">
-graph TD
-5((5)) --> 3((3))
-5((5)) ---> 11((11))
-5((5)) ---> 14((14))
-5((5)) --> 6((6))
-3((3)) --> 2((2))
-3((3)) --> 4((4))
-2((2)) --> 1((1))
-2((2)) ---> 8((8))
-8((8)) --> 7((7))
-8((8)) --> 9((9))
-7((7)) ---> 10((10))
-11((11)) --> 15((15))
-11((11)) --> 12((12))
-15((15)) --> 16((16))
-12((12)) --> 13((13))
-</div>
+<img src="original_dataset\flow20.png" alt="The flowchart is oriented top to bottom. Node 1 is a ellipse node labeled &#x27;1&#x27;. Node 10 is a ellipse node labeled &#x27;10&#x27;. Node 11 is a ellipse node labeled &#x27;11&#x27;. Node 12 is a ellipse node labeled &#x27;12&#x27;. Node 13 is a ellipse node labeled &#x27;13&#x27;. Node 14 is a ellipse node labeled &#x27;14&#x27;. Node 15 is a ellipse node labeled &#x27;15&#x27;. Node 16 is a ellipse node labeled &#x27;16&#x27;. Node 2 is a ellipse node labeled &#x27;2&#x27;. Node 3 is a ellipse node labeled &#x27;3&#x27;. Node 4 is a ellipse node labeled &#x27;4&#x27;. Node 5 is a ellipse node labeled &#x27;5&#x27;. Node 6 is a ellipse node labeled &#x27;6&#x27;. Node 7 is a ellipse node labeled &#x27;7&#x27;. Node 8 is a ellipse node labeled &#x27;8&#x27;. Node 9 is a ellipse node labeled &#x27;9&#x27;." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node 1 is a ellipse node labeled &#x27;1&#x27;. Node 10 is a ellipse node labeled &#x27;10&#x27;. Node 11 is a ellipse node labeled &#x27;11&#x27;. Node 12 is a ellipse node labeled &#x27;12&#x27;. Node 13 is a ellipse node labeled &#x27;13&#x27;. Node 14 is a ellipse node labeled &#x27;14&#x27;. Node 15 is a ellipse node labeled &#x27;15&#x27;. Node 16 is a ellipse node labeled &#x27;16&#x27;. Node 2 is a ellipse node labeled &#x27;2&#x27;. Node 3 is a ellipse node labeled &#x27;3&#x27;. Node 4 is a ellipse node labeled &#x27;4&#x27;. Node 5 is a ellipse node labeled &#x27;5&#x27;. Node 6 is a ellipse node labeled &#x27;6&#x27;. Node 7 is a ellipse node labeled &#x27;7&#x27;. Node 8 is a ellipse node labeled &#x27;8&#x27;. Node 9 is a ellipse node labeled &#x27;9&#x27;.">
 <pre class="flowchart-title">Flowchart from flow21, page 5</pre>
-<div class="mermaid">
-graph TD
-5((5)) --> 11((11))
-5((5)) ---> 3((3))
-5((5)) ---> 14((14))
-5((5)) --> 6((6))
-11((11)) --> 15((15))
-11((11)) --> 12((12))
-15((15)) --> 16((16))
-12((12)) --> 13((13))
-3((3)) --> 2((2))
-3((3)) --> 4((4))
-2((2)) --> 1((1))
-2((2)) ---> 8((8))
-8((8)) --> 7((7))
-8((8)) --> 9((9))
-7((7)) ---> 10((10))
-</div>
+<img src="original_dataset\flow21.png" alt="The flowchart is oriented top to bottom. Node 1 is a ellipse node labeled &#x27;1&#x27;. Node 10 is a ellipse node labeled &#x27;10&#x27;. Node 11 is a ellipse node labeled &#x27;11&#x27;. Node 12 is a ellipse node labeled &#x27;12&#x27;. Node 13 is a ellipse node labeled &#x27;13&#x27;. Node 14 is a ellipse node labeled &#x27;14&#x27;. Node 15 is a ellipse node labeled &#x27;15&#x27;. Node 16 is a ellipse node labeled &#x27;16&#x27;. Node 2 is a ellipse node labeled &#x27;2&#x27;. Node 3 is a ellipse node labeled &#x27;3&#x27;. Node 4 is a ellipse node labeled &#x27;4&#x27;. Node 5 is a ellipse node labeled &#x27;5&#x27;. Node 6 is a ellipse node labeled &#x27;6&#x27;. Node 7 is a ellipse node labeled &#x27;7&#x27;. Node 8 is a ellipse node labeled &#x27;8&#x27;. Node 9 is a ellipse node labeled &#x27;9&#x27;." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node 11 is a ellipse node labeled &#x27;11&#x27;. Node 12 is a ellipse node labeled &#x27;12&#x27;. Node 13 is a ellipse node labeled &#x27;13&#x27;. Node 15 is a ellipse node labeled &#x27;15&#x27;. Node 16 is a ellipse node labeled &#x27;16&#x27;. Node 5 is a ellipse node labeled &#x27;5&#x27;. Node 6 is a ellipse node labeled &#x27;6&#x27;.">
 <pre class="flowchart-title">Flowchart from flow22, page 6</pre>
-<div class="mermaid">
-graph TD
-5((5)) --> 11((11))
-5((5)) --> 6((6))
-11((11)) --> 15((15))
-11((11)) --> 12((12))
-15((15)) --> 16((16))
-12((12)) --> 13((13))
-</div>
+<img src="original_dataset\flow22.png" alt="The flowchart is oriented top to bottom. Node 11 is a ellipse node labeled &#x27;11&#x27;. Node 12 is a ellipse node labeled &#x27;12&#x27;. Node 13 is a ellipse node labeled &#x27;13&#x27;. Node 15 is a ellipse node labeled &#x27;15&#x27;. Node 16 is a ellipse node labeled &#x27;16&#x27;. Node 5 is a ellipse node labeled &#x27;5&#x27;. Node 6 is a ellipse node labeled &#x27;6&#x27;." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node 11 is a ellipse node labeled &#x27;11&#x27;. Node 12 is a ellipse node labeled &#x27;12&#x27;. Node 13 is a ellipse node labeled &#x27;13&#x27;. Node 15 is a ellipse node labeled &#x27;15&#x27;. Node 16 is a ellipse node labeled &#x27;16&#x27;. Node 5 is a ellipse node labeled &#x27;5&#x27;. Node 6 is a ellipse node labeled &#x27;6&#x27;.">
 <pre class="flowchart-title">Flowchart from flow23, page 6</pre>
-<div class="mermaid">
-graph TD
-15((15)) --> 11((11))
-11((11)) --> 16((16))
-11((11)) --> 5((5))
-5((5)) --> 12((12))
-5((5)) --> 6((6))
-12((12)) --> 13((13))
-</div>
+<img src="original_dataset\flow23.png" alt="The flowchart is oriented top to bottom. Node 11 is a ellipse node labeled &#x27;11&#x27;. Node 12 is a ellipse node labeled &#x27;12&#x27;. Node 13 is a ellipse node labeled &#x27;13&#x27;. Node 15 is a ellipse node labeled &#x27;15&#x27;. Node 16 is a ellipse node labeled &#x27;16&#x27;. Node 5 is a ellipse node labeled &#x27;5&#x27;. Node 6 is a ellipse node labeled &#x27;6&#x27;." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node a is a ellipse node labeled &#x27;a&#x27;. Node b is a ellipse node labeled &#x27;b&#x27;. Node c is a ellipse node labeled &#x27;c&#x27;. Node v is a ellipse node labeled &#x27;v&#x27;. Node w is a ellipse node labeled &#x27;w&#x27;.">
 <pre class="flowchart-title">Flowchart from flow24, page 6</pre>
-<div class="mermaid">
-graph TD
-w((w)) --> v((v))
-w((w)) --> c((c))
-v((v)) --> a((a))
-v((v)) --> b((b))
-</div>
+<img src="original_dataset\flow24.png" alt="The flowchart is oriented top to bottom. Node a is a ellipse node labeled &#x27;a&#x27;. Node b is a ellipse node labeled &#x27;b&#x27;. Node c is a ellipse node labeled &#x27;c&#x27;. Node v is a ellipse node labeled &#x27;v&#x27;. Node w is a ellipse node labeled &#x27;w&#x27;." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node a is a ellipse node labeled &#x27;a&#x27;. Node b is a ellipse node labeled &#x27;b&#x27;. Node c is a ellipse node labeled &#x27;c&#x27;. Node v is a ellipse node labeled &#x27;v&#x27;. Node w is a ellipse node labeled &#x27;w&#x27;.">
 <pre class="flowchart-title">Flowchart from flow25, page 6</pre>
-<div class="mermaid">
-graph TD
-v((v)) --> a((a))
-v((v)) --> w((w))
-w((w)) --> b((b))
-w((w)) --> c((c))
-</div>
+<img src="original_dataset\flow25.png" alt="The flowchart is oriented top to bottom. Node a is a ellipse node labeled &#x27;a&#x27;. Node b is a ellipse node labeled &#x27;b&#x27;. Node c is a ellipse node labeled &#x27;c&#x27;. Node v is a ellipse node labeled &#x27;v&#x27;. Node w is a ellipse node labeled &#x27;w&#x27;." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node A is a diamond decision node labeled &#x27;A&#x27;. Node B is a diamond decision node labeled &#x27;B&#x27;. Node c is a ellipse node labeled &#x27;c&#x27;. Node y is a ellipse node labeled &#x27;y&#x27;. Node z is a ellipse node labeled &#x27;z&#x27;.">
 <pre class="flowchart-title">Flowchart from flow26, page 5</pre>
-<div class="mermaid">
-graph TD
-y((y)) --> z((z))
-y((y)) --> B{B}
-z((z)) --> A{A}
-z((z)) --> c((c))
-
-
-classDef diamondShape fill:#fff,stroke:#000,stroke-width:1px;
-
-class A,B diamondShape
-</div>
+<img src="original_dataset\flow26.png" alt="The flowchart is oriented top to bottom. Node A is a diamond decision node labeled &#x27;A&#x27;. Node B is a diamond decision node labeled &#x27;B&#x27;. Node c is a ellipse node labeled &#x27;c&#x27;. Node y is a ellipse node labeled &#x27;y&#x27;. Node z is a ellipse node labeled &#x27;z&#x27;." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node a is a diamond decision node labeled &#x27;A&#x27;. Node b is a diamond decision node labeled &#x27;B&#x27;. Node c is a diamond decision node labeled &#x27;C&#x27;. Node x is a ellipse node labeled &#x27;x&#x27;. Node y is a ellipse node labeled &#x27;y&#x27;.">
 <pre class="flowchart-title">Flowchart from flow27, page 6</pre>
-<div class="mermaid">
-graph TD
-y((y)) --> x((x))
-y((y)) --> c{C}
-x((x)) --> a{A}
-x((x)) --> b{B}
-</div>
+<img src="original_dataset\flow27.png" alt="The flowchart is oriented top to bottom. Node a is a diamond decision node labeled &#x27;A&#x27;. Node b is a diamond decision node labeled &#x27;B&#x27;. Node c is a diamond decision node labeled &#x27;C&#x27;. Node x is a ellipse node labeled &#x27;x&#x27;. Node y is a ellipse node labeled &#x27;y&#x27;." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node X is a ellipse node labeled &#x27;X&#x27;. Node a is a diamond decision node labeled &#x27;A&#x27;. Node b is a diamond decision node labeled &#x27;B&#x27;. Node c is a diamond decision node labeled &#x27;C&#x27;. Node y is a ellipse node labeled &#x27;y&#x27;.">
 <pre class="flowchart-title">Flowchart from flow28, page 6</pre>
-<div class="mermaid">
-graph TD
-X((X)) --> a{A}
-X((X)) --> y((y))
-y((y)) --> b{B}
-y((y)) --> c{C}
-</div>
+<img src="original_dataset\flow28.png" alt="The flowchart is oriented top to bottom. Node X is a ellipse node labeled &#x27;X&#x27;. Node a is a diamond decision node labeled &#x27;A&#x27;. Node b is a diamond decision node labeled &#x27;B&#x27;. Node c is a diamond decision node labeled &#x27;C&#x27;. Node y is a ellipse node labeled &#x27;y&#x27;." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node a is a diamond decision node labeled &#x27;A&#x27;. Node b is a diamond decision node labeled &#x27;B&#x27;. Node c is a diamond decision node labeled &#x27;C&#x27;. Node d is a diamond decision node labeled &#x27;D&#x27;. Node x is a ellipse node labeled &#x27;x&#x27;. Node y is a ellipse node labeled &#x27;y&#x27;. Node z is a ellipse node labeled &#x27;z&#x27;.">
 <pre class="flowchart-title">Flowchart from flow29, page 7</pre>
-<div class="mermaid">
-graph TD
-z((z)) --> y((y))
-z((z)) --> d{D}
-y((y)) --> x((x))
-y((y)) --> c{C}
-x((x)) --> a{A}
-x((x)) --> b{B}
-</div>
+<img src="original_dataset\flow29.png" alt="The flowchart is oriented top to bottom. Node a is a diamond decision node labeled &#x27;A&#x27;. Node b is a diamond decision node labeled &#x27;B&#x27;. Node c is a diamond decision node labeled &#x27;C&#x27;. Node d is a diamond decision node labeled &#x27;D&#x27;. Node x is a ellipse node labeled &#x27;x&#x27;. Node y is a ellipse node labeled &#x27;y&#x27;. Node z is a ellipse node labeled &#x27;z&#x27;." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node X is a ellipse node labeled &#x27;X&#x27;. Node a is a diamond decision node labeled &#x27;A&#x27;. Node b is a diamond decision node labeled &#x27;B&#x27;. Node c is a diamond decision node labeled &#x27;C&#x27;. Node d is a diamond decision node labeled &#x27;D&#x27;. Node y is a ellipse node labeled &#x27;y&#x27;. Node z is a ellipse node labeled &#x27;z&#x27;.">
 <pre class="flowchart-title">Flowchart from flow30, page 7</pre>
-<div class="mermaid">
-graph TD
-X((X)) --> a{A}
-X((X)) --> y((y))
-y((y)) --> b{B}
-y((y)) --> z((z))
-z((z)) --> c{C}
-z((z)) --> d{D}
-</div>
+<img src="original_dataset\flow30.png" alt="The flowchart is oriented top to bottom. Node X is a ellipse node labeled &#x27;X&#x27;. Node a is a diamond decision node labeled &#x27;A&#x27;. Node b is a diamond decision node labeled &#x27;B&#x27;. Node c is a diamond decision node labeled &#x27;C&#x27;. Node d is a diamond decision node labeled &#x27;D&#x27;. Node y is a ellipse node labeled &#x27;y&#x27;. Node z is a ellipse node labeled &#x27;z&#x27;." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node Z is a ellipse node labeled &#x27;Z&#x27;. Node a is a diamond decision node labeled &#x27;A&#x27;. Node b is a diamond decision node labeled &#x27;B&#x27;. Node c is a diamond decision node labeled &#x27;C&#x27;. Node d is a diamond decision node labeled &#x27;D&#x27;. Node x is a ellipse node labeled &#x27;x&#x27;. Node y is a ellipse node labeled &#x27;y&#x27;.">
 <pre class="flowchart-title">Flowchart from flow31, page 7</pre>
-<div class="mermaid">
-graph TD
-Z((Z)) --> y((y))
-Z((Z)) --> d{D}
-y((y)) --> x((x))
-y((y)) --> c{C}
-x((x)) --> a{A}
-x((x)) --> b{B}
-</div>
+<img src="original_dataset\flow31.png" alt="The flowchart is oriented top to bottom. Node Z is a ellipse node labeled &#x27;Z&#x27;. Node a is a diamond decision node labeled &#x27;A&#x27;. Node b is a diamond decision node labeled &#x27;B&#x27;. Node c is a diamond decision node labeled &#x27;C&#x27;. Node d is a diamond decision node labeled &#x27;D&#x27;. Node x is a ellipse node labeled &#x27;x&#x27;. Node y is a ellipse node labeled &#x27;y&#x27;." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node A is a diamond decision node labeled &#x27;A&#x27;. Node B is a diamond decision node labeled &#x27;B&#x27;. Node C is a diamond decision node labeled &#x27;C&#x27;. Node D is a diamond decision node labeled &#x27;D&#x27;. Node X is a ellipse node labeled &#x27;X&#x27;. Node Z is a ellipse node labeled &#x27;Z&#x27;. Node y is a ellipse node labeled &#x27;y&#x27;.">
 <pre class="flowchart-title">Flowchart from flow32, page 7</pre>
-<div class="mermaid">
-graph TD
-X((X)) --> y((y))
-X((X)) --> Z((Z))
-y((y)) --> A{A}
-y((y)) --> B{B}
-Z((Z)) --> C{C}
-Z((Z)) --> D{D}
-</div>
+<img src="original_dataset\flow32.png" alt="The flowchart is oriented top to bottom. Node A is a diamond decision node labeled &#x27;A&#x27;. Node B is a diamond decision node labeled &#x27;B&#x27;. Node C is a diamond decision node labeled &#x27;C&#x27;. Node D is a diamond decision node labeled &#x27;D&#x27;. Node X is a ellipse node labeled &#x27;X&#x27;. Node Z is a ellipse node labeled &#x27;Z&#x27;. Node y is a ellipse node labeled &#x27;y&#x27;." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node A is a diamond decision node labeled &#x27;A&#x27;. Node B is a diamond decision node labeled &#x27;B&#x27;. Node C is a diamond decision node labeled &#x27;C&#x27;. Node D is a diamond decision node labeled &#x27;D&#x27;. Node X is a ellipse node labeled &#x27;X&#x27;. Node Z is a ellipse node labeled &#x27;Z&#x27;. Node y is a ellipse node labeled &#x27;y&#x27;.">
 <pre class="flowchart-title">Flowchart from flow33, page 2</pre>
-<div class="mermaid">
-graph TD
-Z((Z)) --> y((y))
-Z((Z)) --> D{D}
-y((y)) --> A{A}
-y((y)) --> X((X))
-X((X)) --> B{B}
-X((X)) --> C{C}
-</div>
+<img src="original_dataset\flow33.png" alt="The flowchart is oriented top to bottom. Node A is a diamond decision node labeled &#x27;A&#x27;. Node B is a diamond decision node labeled &#x27;B&#x27;. Node C is a diamond decision node labeled &#x27;C&#x27;. Node D is a diamond decision node labeled &#x27;D&#x27;. Node X is a ellipse node labeled &#x27;X&#x27;. Node Z is a ellipse node labeled &#x27;Z&#x27;. Node y is a ellipse node labeled &#x27;y&#x27;." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node A is a diamond decision node labeled &#x27;A&#x27;. Node B is a diamond decision node labeled &#x27;B&#x27;. Node C is a diamond decision node labeled &#x27;C&#x27;. Node D is a diamond decision node labeled &#x27;D&#x27;. It is pointed to by node Z. Node X is a ellipse node labeled &#x27;X&#x27;. Node Z is a ellipse node labeled &#x27;Z&#x27;. It points to node D. Node y is a ellipse node labeled &#x27;y&#x27;.">
 <pre class="flowchart-title">Flowchart from flow34, page 2</pre>
-<div class="mermaid">
-graph TD
-Z((Z)) --> y((y))
-Z --> D{D}
-y((y)) --> A{A}
-y((y)) --> X((X))
-X((X)) --> B{B}
-X((X)) --> C{C}
-</div>
+<img src="original_dataset\flow34.png" alt="The flowchart is oriented top to bottom. Node A is a diamond decision node labeled &#x27;A&#x27;. Node B is a diamond decision node labeled &#x27;B&#x27;. Node C is a diamond decision node labeled &#x27;C&#x27;. Node D is a diamond decision node labeled &#x27;D&#x27;. It is pointed to by node Z. Node X is a ellipse node labeled &#x27;X&#x27;. Node Z is a ellipse node labeled &#x27;Z&#x27;. It points to node D. Node y is a ellipse node labeled &#x27;y&#x27;." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node U is a ellipse node labeled &#x27;U&#x27;. Node W is a ellipse node labeled &#x27;W&#x27;.">
 <pre class="flowchart-title">Flowchart from flow35, page 2</pre>
-<div class="mermaid">
-graph TD
-U((U)) --->|l=5| W((W))
-W((W)) --->|l=5| U((U))
-</div>
+<img src="original_dataset\flow35.png" alt="The flowchart is oriented top to bottom. Node U is a ellipse node labeled &#x27;U&#x27;. Node W is a ellipse node labeled &#x27;W&#x27;." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node s is a ellipse node labeled &#x27;s&#x27;. It is pointed to by nodes 2, 3. Node t is a ellipse node labeled &#x27;t&#x27;. It is pointed to by nodes 1, 3. Node v is a ellipse node labeled &#x27;v&#x27;. It is pointed to by nodes 3, 3, 2. Node w is a ellipse node labeled &#x27;w&#x27;. It is pointed to by nodes 3, 2. Node z is a ellipse node labeled &#x27;z&#x27;. It is pointed to by nodes 1, 1, 4, 3.">
 <pre class="flowchart-title">Flowchart from flow36, page 5</pre>
-<div class="mermaid">
-graph TD
-s((s)) -- 2/3 --> v((v))
-s((s)) -- 1/1 --> z((z))
-v((v)) -- 3/3 --> w((w))
-v((v)) -- -2/2 --> s((s))
-v((v)) -- -1/1 --> z((z))
-w((w)) -- -3/3 --> v((v))
-w((w)) -- 2/4 --> z((z))
-w((w)) -- 1/1 --> t((t))
-z((z)) -- -1/3 --> s((s))
-z((z)) -- 1/2 --> v((v))
-z((z)) -- 2/3 --> t((t))
-t((t)) -- -2/3 --> z((z))
-t((t)) -- 1/2 --> w((w))
-</div>
+<img src="original_dataset\flow36.png" alt="The flowchart is oriented top to bottom. Node s is a ellipse node labeled &#x27;s&#x27;. It is pointed to by nodes 2, 3. Node t is a ellipse node labeled &#x27;t&#x27;. It is pointed to by nodes 1, 3. Node v is a ellipse node labeled &#x27;v&#x27;. It is pointed to by nodes 3, 3, 2. Node w is a ellipse node labeled &#x27;w&#x27;. It is pointed to by nodes 3, 2. Node z is a ellipse node labeled &#x27;z&#x27;. It is pointed to by nodes 1, 1, 4, 3." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node 1 is a ellipse node labeled &#x27;1&#x27;. It points to node 2. It is pointed to by node c. Node 2 is a ellipse node labeled &#x27;2&#x27;. It is pointed to by nodes c, 1. Node s is a ellipse node labeled &#x27;s&#x27;. Node t is a ellipse node labeled &#x27;t&#x27;. It is pointed to by nodes c, c.">
 <pre class="flowchart-title">Flowchart from flow37, page 12</pre>
-<div class="mermaid">
-graph TD
-s((s)) -- c --> 1((1))
-s((s)) -- c --> 2((2))
-1((1)) -- c --> t((t))
-1((1)) -- 1 --> 2((2))
-2((2)) -- c --> t((t))
-</div>
+<img src="original_dataset\flow37.png" alt="The flowchart is oriented top to bottom. Node 1 is a ellipse node labeled &#x27;1&#x27;. It points to node 2. It is pointed to by node c. Node 2 is a ellipse node labeled &#x27;2&#x27;. It is pointed to by nodes c, 1. Node s is a ellipse node labeled &#x27;s&#x27;. Node t is a ellipse node labeled &#x27;t&#x27;. It is pointed to by nodes c, c." />
 </div>
 
-<div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node a is a ellipse node labeled &#x27;a&#x27;. Node b is a ellipse node labeled &#x27;b&#x27;. Node c is a ellipse node labeled &#x27;c&#x27;. Node d is a ellipse node labeled &#x27;d&#x27;. Node e is a ellipse node labeled &#x27;e&#x27;. Node f is a ellipse node labeled &#x27;f&#x27;.">
+<div class="flowchart-container" role="img" aria-label="The flowchart is oriented left to right. Node a is a ellipse node labeled &#x27;a&#x27;. Node b is a ellipse node labeled &#x27;b&#x27;. Node c is a ellipse node labeled &#x27;c&#x27;. Node d is a ellipse node labeled &#x27;d&#x27;. Node e is a ellipse node labeled &#x27;e&#x27;.">
 <pre class="flowchart-title">Flowchart from flow38, page 5</pre>
-<div class="mermaid">
-graph TD
-f((f)) --> e((e))
-e((e)) --> d((d))
-d((d)) --> c((c))
-c((c)) --> b((b))
-b((b)) --> a((a))
-</div>
+<img src="original_dataset\flow38.png" alt="The flowchart is oriented left to right. Node a is a ellipse node labeled &#x27;a&#x27;. Node b is a ellipse node labeled &#x27;b&#x27;. Node c is a ellipse node labeled &#x27;c&#x27;. Node d is a ellipse node labeled &#x27;d&#x27;. Node e is a ellipse node labeled &#x27;e&#x27;." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node a is a ellipse node labeled &#x27;a&#x27;. Node b is a ellipse node labeled &#x27;b&#x27;. Node c is a ellipse node labeled &#x27;c&#x27;. Node d is a ellipse node labeled &#x27;d&#x27;. Node e is a ellipse node labeled &#x27;e&#x27;. Node f is a ellipse node labeled &#x27;f&#x27;.">
 <pre class="flowchart-title">Flowchart from flow39, page 5</pre>
-<div class="mermaid">
-graph TD
-c((c)) --> b((b))
-c((c)) --> e((e))
-b((b)) --> a((a))
-e((e)) --> d((d))
-e((e)) --> f((f))
-</div>
+<img src="original_dataset\flow39.png" alt="The flowchart is oriented top to bottom. Node a is a ellipse node labeled &#x27;a&#x27;. Node b is a ellipse node labeled &#x27;b&#x27;. Node c is a ellipse node labeled &#x27;c&#x27;. Node d is a ellipse node labeled &#x27;d&#x27;. Node e is a ellipse node labeled &#x27;e&#x27;. Node f is a ellipse node labeled &#x27;f&#x27;." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node a is a ellipse node labeled &#x27;a&#x27;. Node b is a ellipse node labeled &#x27;b&#x27;. Node c is a ellipse node labeled &#x27;c&#x27;. Node d is a ellipse node labeled &#x27;d&#x27;. Node e is a ellipse node labeled &#x27;e&#x27;. Node f is a ellipse node labeled &#x27;f&#x27;. It points to node i. Node g is a ellipse node labeled &#x27;g&#x27;. It points to node h. Node h is a ellipse node labeled &#x27;h&#x27;. It is pointed to by node g. Node i is a ellipse node labeled &#x27;i&#x27;. It is pointed to by node f.">
 <pre class="flowchart-title">Flowchart from flow40, page 5</pre>
-<div class="mermaid">
-graph TD
-    e((e)) --> d((d))
-    e -.-> f((f))
-    d -.-> a((a))
-    d -.-> b((b))
-    d -.-> c((c))
-    f -.-> g((g))
-    f --> i((i))
-    g --> h((h))
-</div>
+<img src="original_dataset\flow40.png" alt="The flowchart is oriented top to bottom. Node a is a ellipse node labeled &#x27;a&#x27;. Node b is a ellipse node labeled &#x27;b&#x27;. Node c is a ellipse node labeled &#x27;c&#x27;. Node d is a ellipse node labeled &#x27;d&#x27;. Node e is a ellipse node labeled &#x27;e&#x27;. Node f is a ellipse node labeled &#x27;f&#x27;. It points to node i. Node g is a ellipse node labeled &#x27;g&#x27;. It points to node h. Node h is a ellipse node labeled &#x27;h&#x27;. It is pointed to by node g. Node i is a ellipse node labeled &#x27;i&#x27;. It is pointed to by node f." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node a is a ellipse node labeled &#x27;a&#x27;. Node b is a ellipse node labeled &#x27;b&#x27;. Node c is a ellipse node labeled &#x27;c&#x27;. Node d is a ellipse node labeled &#x27;d&#x27;. Node e is a ellipse node labeled &#x27;e&#x27;. Node f is a ellipse node labeled &#x27;f&#x27;. Node g is a ellipse node labeled &#x27;g&#x27;. Node h is a ellipse node labeled &#x27;h&#x27;. Node i is a ellipse node labeled &#x27;i&#x27;.">
 <pre class="flowchart-title">Flowchart from flow41, page 5</pre>
-<div class="mermaid">
-graph TD
-d((d)) --> b((b))
-d --->a((a))
-d ---> c((c))
-d((d)) --> e((e))
-e --.-> i((i))
-i((i)) --> f((f))
-f --.-> g((g))
-g((g)) --> h((h))
-</div>
+<img src="original_dataset\flow41.png" alt="The flowchart is oriented top to bottom. Node a is a ellipse node labeled &#x27;a&#x27;. Node b is a ellipse node labeled &#x27;b&#x27;. Node c is a ellipse node labeled &#x27;c&#x27;. Node d is a ellipse node labeled &#x27;d&#x27;. Node e is a ellipse node labeled &#x27;e&#x27;. Node f is a ellipse node labeled &#x27;f&#x27;. Node g is a ellipse node labeled &#x27;g&#x27;. Node h is a ellipse node labeled &#x27;h&#x27;. Node i is a ellipse node labeled &#x27;i&#x27;." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node 1 is a ellipse node labeled &#x27;1&#x27;. Node 2 is a ellipse node labeled &#x27;2&#x27;. It is pointed to by node 10. Node 3 is a ellipse node labeled &#x27;3&#x27;. It is pointed to by node 25. Node 4 is a ellipse node labeled &#x27;4&#x27;. It is pointed to by node 20. Node 5 is a ellipse node labeled &#x27;5&#x27;. It is pointed to by nodes 15, 35, 40. Node 6 is a ellipse node labeled &#x27;6&#x27;. It is pointed to by nodes 30, 20.">
 <pre class="flowchart-title">Flowchart from flow43, page 7</pre>
-<div class="mermaid">
-graph TD
-1((1)) -- 10 --> 2((2))
-1((1)) -- 25 --> 3((3))
-2((2)) -- 20 --> 4((4))
-2((2)) -- 15 --> 5((5))
-3((3)) -- 35 --> 5((5))
-4((4)) -- 40 --> 5((5))
-4((4)) -- 30 --> 6((6))
-5((5)) -- 20 --> 6((6))
-2--->3
-</div>
+<img src="original_dataset\flow43.png" alt="The flowchart is oriented top to bottom. Node 1 is a ellipse node labeled &#x27;1&#x27;. Node 2 is a ellipse node labeled &#x27;2&#x27;. It is pointed to by node 10. Node 3 is a ellipse node labeled &#x27;3&#x27;. It is pointed to by node 25. Node 4 is a ellipse node labeled &#x27;4&#x27;. It is pointed to by node 20. Node 5 is a ellipse node labeled &#x27;5&#x27;. It is pointed to by nodes 15, 35, 40. Node 6 is a ellipse node labeled &#x27;6&#x27;. It is pointed to by nodes 30, 20." />
 </div>
 
-<div class="flowchart-container" role="img" aria-label="The flowchart is oriented left to right. Node n1 is a ellipse node labeled &#x27;1&#x27;. It points to node n2, to node n4. It is pointed to by node nodeStyle. Node n2 is a ellipse node labeled &#x27;2&#x27;. It points &#x27;9&#x27; to node t, to node n5. It is pointed to by node n1. Node n3 is a ellipse node labeled &#x27;3&#x27;. It points to node n4. It is pointed to by node s. Node n4 is a ellipse node labeled &#x27;4&#x27;. It points to node n5. It is pointed to by nodes n1, n3. Node n5 is a ellipse node labeled &#x27;5&#x27;. It points &#x27;10&#x27; to node t. It is pointed to by nodes n2, n4. Node s is a ellipse node labeled &#x27;s&#x27;. It points &#x27;7&#x27; to node n3. Node t is a ellipse node labeled &#x27;t&#x27;. It is pointed to by nodes n2, n5.">
+<div class="flowchart-container" role="img" aria-label="The flowchart is oriented left to right. Node 1 is a ellipse node labeled &#x27;1&#x27;. It points to node 2, to node 4. It is pointed to by node nodeStyle. Node 2 is a ellipse node labeled &#x27;2&#x27;. It points &#x27;9&#x27; to node t, to node 5. It is pointed to by node 1. Node 3 is a ellipse node labeled &#x27;3&#x27;. It points to node 4. It is pointed to by node s. Node 4 is a ellipse node labeled &#x27;4&#x27;. It points to node 5. It is pointed to by nodes 1, 3. Node 5 is a ellipse node labeled &#x27;5&#x27;. It points &#x27;10&#x27; to node t. It is pointed to by nodes 2, 4. Node s is a ellipse node labeled &#x27;s&#x27;. It points &#x27;7&#x27; to node 3. Node t is a ellipse node labeled &#x27;t&#x27;. It is pointed to by nodes 2, 5.">
 <pre class="flowchart-title">Flowchart from flow48, page 34</pre>
-<div class="mermaid">
-flowchart LR
-classDef nodeStyle fill:#00cc99,stroke:#00cc99,color:white;
-classDef edgeStyle stroke:#ffff00;
-
-s((s)):::nodeStyle -->|8| n1((1)):::nodeStyle
-s -->|7| n3((3)):::nodeStyle
-n1 --> n2((2)):::nodeStyle
-n1 --> n4((4)):::nodeStyle
-n2 -->|9| t((t)):::nodeStyle
-n2 --> n5((5)):::nodeStyle
-n3 --> n4
-n4 --> n5
-n5 -->|10| t
-
-class s,n1,n2,n3,n4,n5,t nodeStyle
-
-linkStyle 0 stroke:#ffff00
-linkStyle 1 stroke:#ffff00
-linkStyle 2 stroke:#ffff00
-linkStyle 3 stroke:#ffff00
-linkStyle 4 stroke:#ffff00
-linkStyle 5 stroke:#ffff00
-linkStyle 6 stroke:#ffff00
-linkStyle 7 stroke:#ffff00
-linkStyle 8 stroke:#ffff00
-</div>
+<img src="original_dataset\flow48.png" alt="The flowchart is oriented left to right. Node 1 is a ellipse node labeled &#x27;1&#x27;. It points to node 2, to node 4. It is pointed to by node nodeStyle. Node 2 is a ellipse node labeled &#x27;2&#x27;. It points &#x27;9&#x27; to node t, to node 5. It is pointed to by node 1. Node 3 is a ellipse node labeled &#x27;3&#x27;. It points to node 4. It is pointed to by node s. Node 4 is a ellipse node labeled &#x27;4&#x27;. It points to node 5. It is pointed to by nodes 1, 3. Node 5 is a ellipse node labeled &#x27;5&#x27;. It points &#x27;10&#x27; to node t. It is pointed to by nodes 2, 4. Node s is a ellipse node labeled &#x27;s&#x27;. It points &#x27;7&#x27; to node 3. Node t is a ellipse node labeled &#x27;t&#x27;. It is pointed to by nodes 2, 5." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node A1 is a rectangle node labeled &#x27;&quot;Objective value = 22.2\nx₁=1, x₂=0, x₃=0.6, x₄=1&quot;&#x27;. It points &#x27;x₃=1&#x27; to node A3. Node A2 is a rectangle node labeled &#x27;&quot;Objective value = 22\nx₁=1, x₂=0.5, x₃=0, x₄=1&quot;&#x27;. Node A3 is a rectangle node labeled &#x27;&quot;Objective value = 22\nx₁=1, x₂=0, x₃=1, x₄=0.5&quot;&#x27;. It is pointed to by node A1.">
 <pre class="flowchart-title">Flowchart from flow49, page 5</pre>
-<div class="mermaid">
-graph TD
-    A1["Objective value = 22.2\nx₁=1, x₂=0, x₃=0.6, x₄=1"] -->|x₃=0| A2["Objective value = 22\nx₁=1, x₂=0.5, x₃=0, x₄=1"]
-    A1 -->|x₃=1| A3["Objective value = 22\nx₁=1, x₂=0, x₃=1, x₄=0.5"]
-</div>
+<img src="original_dataset\flow49.png" alt="The flowchart is oriented top to bottom. Node A1 is a rectangle node labeled &#x27;&quot;Objective value = 22.2\nx₁=1, x₂=0, x₃=0.6, x₄=1&quot;&#x27;. It points &#x27;x₃=1&#x27; to node A3. Node A2 is a rectangle node labeled &#x27;&quot;Objective value = 22\nx₁=1, x₂=0.5, x₃=0, x₄=1&quot;&#x27;. Node A3 is a rectangle node labeled &#x27;&quot;Objective value = 22\nx₁=1, x₂=0, x₃=1, x₄=0.5&quot;&#x27;. It is pointed to by node A1." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node A is a rectangle node labeled &#x27;Objective value=22.2&lt;br&gt;x₁=1, x₂=0, x₃=0.6, x₄=1&#x27;. It points &#x27;x₃=0&#x27; to node B, &#x27;x₃=1&#x27; to node C. Node B is a rectangle node labeled &#x27;Objective value=22&lt;br&gt;x₁=1, x₂=0.5, x₃=0, x₄=1&#x27;. It is pointed to by node A. Node C is a rectangle node labeled &#x27;Objective value=22&lt;br&gt;x₁=1, x₂=0, x₃=1, x₄=0.5&#x27;. It points &#x27;x₄=0&#x27; to node D, &#x27;x₄=1&#x27; to node E. It is pointed to by node A. Node D is a rectangle node labeled &#x27;Objective value=21.66&lt;br&gt;x₁=1, x₂=0.33, x₃=1, x₄=0&#x27;. It is pointed to by node C. Node E is a rectangle node labeled &#x27;Objective value=22&lt;br&gt;x₁=0.75, x₂=0, x₃=1, x₄=1&#x27;. It is pointed to by node C.">
 <pre class="flowchart-title">Flowchart from flow50, page 5</pre>
-<div class="mermaid">
-graph TD
-    A[Objective value=22.2<br>x₁=1, x₂=0, x₃=0.6, x₄=1]
-
-    A -->|x₃=0| B[Objective value=22<br>x₁=1, x₂=0.5, x₃=0, x₄=1]
-    A -->|x₃=1| C[Objective value=22<br>x₁=1, x₂=0, x₃=1, x₄=0.5]
-
-    C -->|x₄=0| D[Objective value=21.66<br>x₁=1, x₂=0.33, x₃=1, x₄=0]
-    C -->|x₄=1| E[Objective value=22<br>x₁=0.75, x₂=0, x₃=1, x₄=1]
-</div>
+<img src="original_dataset\flow50.png" alt="The flowchart is oriented top to bottom. Node A is a rectangle node labeled &#x27;Objective value=22.2&lt;br&gt;x₁=1, x₂=0, x₃=0.6, x₄=1&#x27;. It points &#x27;x₃=0&#x27; to node B, &#x27;x₃=1&#x27; to node C. Node B is a rectangle node labeled &#x27;Objective value=22&lt;br&gt;x₁=1, x₂=0.5, x₃=0, x₄=1&#x27;. It is pointed to by node A. Node C is a rectangle node labeled &#x27;Objective value=22&lt;br&gt;x₁=1, x₂=0, x₃=1, x₄=0.5&#x27;. It points &#x27;x₄=0&#x27; to node D, &#x27;x₄=1&#x27; to node E. It is pointed to by node A. Node D is a rectangle node labeled &#x27;Objective value=21.66&lt;br&gt;x₁=1, x₂=0.33, x₃=1, x₄=0&#x27;. It is pointed to by node C. Node E is a rectangle node labeled &#x27;Objective value=22&lt;br&gt;x₁=0.75, x₂=0, x₃=1, x₄=1&#x27;. It is pointed to by node C." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented left to right. Node A is a rectangle node labeled &#x27;Objective value=22.2, x1=1, x2=0, x3=0.6, x4=1&#x27;. It points &#x27;x3=1&#x27; to node C. Node B is a rectangle node labeled &#x27;Objective value=22, x1=1, x2=0.5, x3=0, x4=1&#x27;. Node C is a rectangle node labeled &#x27;Objective value=22, x1=1, x2=0, x3=1, x4=0.5&#x27;. It points &#x27;x4=0&#x27; to node D, &#x27;x4=1&#x27; to node E. It is pointed to by node A. Node D is a rectangle node labeled &#x27;Objective value=21.66, x1=1, x2=0.33, x3=1, x4=0&#x27;. It is pointed to by node C. Node E is a rectangle node labeled &#x27;Objective value=22, x1=0.75, x2=0, x3=1, x4=1&#x27;. It points &#x27;x1=0&#x27; to node F. It is pointed to by node C. Node F is a rectangle node labeled &#x27;Objective value=21, x1=0, x2=1, x3=1, x4=1&#x27;. It is pointed to by node E. Node g is a rectangle node labeled &#x27;infefasible&#x27;.">
 <pre class="flowchart-title">Flowchart from flow51, page 6</pre>
-<div class="mermaid">
-flowchart TB
-    A[Objective value=22.2, x1=1, x2=0, x3=0.6, x4=1] -->|x3=0| B[Objective value=22, x1=1, x2=0.5, x3=0, x4=1]
-    A -->|x3=1| C[Objective value=22, x1=1, x2=0, x3=1, x4=0.5]
-    C -->|x4=0| D[Objective value=21.66, x1=1, x2=0.33, x3=1, x4=0]
-    C -->|x4=1| E[Objective value=22, x1=0.75, x2=0, x3=1, x4=1]
-    E -->|x1=0| F[Objective value=21, x1=0, x2=1, x3=1, x4=1]
-    E---> g[infefasible]
-</div>
+<img src="original_dataset\flow51.png" alt="The flowchart is oriented left to right. Node A is a rectangle node labeled &#x27;Objective value=22.2, x1=1, x2=0, x3=0.6, x4=1&#x27;. It points &#x27;x3=1&#x27; to node C. Node B is a rectangle node labeled &#x27;Objective value=22, x1=1, x2=0.5, x3=0, x4=1&#x27;. Node C is a rectangle node labeled &#x27;Objective value=22, x1=1, x2=0, x3=1, x4=0.5&#x27;. It points &#x27;x4=0&#x27; to node D, &#x27;x4=1&#x27; to node E. It is pointed to by node A. Node D is a rectangle node labeled &#x27;Objective value=21.66, x1=1, x2=0.33, x3=1, x4=0&#x27;. It is pointed to by node C. Node E is a rectangle node labeled &#x27;Objective value=22, x1=0.75, x2=0, x3=1, x4=1&#x27;. It points &#x27;x1=0&#x27; to node F. It is pointed to by node C. Node F is a rectangle node labeled &#x27;Objective value=21, x1=0, x2=1, x3=1, x4=1&#x27;. It is pointed to by node E. Node g is a rectangle node labeled &#x27;infefasible&#x27;." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node 1 is a ellipse node labeled &#x27;1&#x27;. Node 2 is a ellipse node labeled &#x27;2&#x27;. Node 3 is a ellipse node labeled &#x27;3&#x27;. Node 4 is a ellipse node labeled &#x27;4&#x27;.">
 <pre class="flowchart-title">Flowchart from flow52, page 7</pre>
-<div class="mermaid">
-graph TD
-1((1)) --> 2((2))
-2((2)) --> 3((3))
-3((3)) --> 4((4))
-4((4)) --> 1((1))
-</div>
+<img src="original_dataset\flow52.png" alt="The flowchart is oriented top to bottom. Node 1 is a ellipse node labeled &#x27;1&#x27;. Node 2 is a ellipse node labeled &#x27;2&#x27;. Node 3 is a ellipse node labeled &#x27;3&#x27;. Node 4 is a ellipse node labeled &#x27;4&#x27;." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node 5 is a ellipse node labeled &#x27;5&#x27;. Node 6 is a ellipse node labeled &#x27;6&#x27;. Node 7 is a ellipse node labeled &#x27;7&#x27;.">
 <pre class="flowchart-title">Flowchart from flow53, page 7</pre>
-<div class="mermaid">
-graph TD
-5((5)) --> 6((6))
-6((6)) --> 7((7))
-7((7)) --> 5((5))
-</div>
+<img src="original_dataset\flow53.png" alt="The flowchart is oriented top to bottom. Node 5 is a ellipse node labeled &#x27;5&#x27;. Node 6 is a ellipse node labeled &#x27;6&#x27;. Node 7 is a ellipse node labeled &#x27;7&#x27;." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node KNOWLEDGEENGINEER is a rectangle node labeled &#x27;knowledgeengineer&#x27;. Node SYSTEM is a rectangle node labeled &#x27;system&#x27;.">
 <pre class="flowchart-title">Flowchart from flow54, page 11</pre>
-<div class="mermaid">
-graph TD
-    SYSTEM[system] <--> KNOWLEDGEENGINEER[knowledgeengineer]
-    KNOWLEDGEENGINEER <--> EXPERT
-</div>
+<img src="original_dataset\flow54.png" alt="The flowchart is oriented top to bottom. Node KNOWLEDGEENGINEER is a rectangle node labeled &#x27;knowledgeengineer&#x27;. Node SYSTEM is a rectangle node labeled &#x27;system&#x27;." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node V1 is a ellipse node labeled &#x27;V1&#x27;. Node V2 is a ellipse node labeled &#x27;V2&#x27;. Node V3 is a ellipse node labeled &#x27;V3&#x27;. Node V4 is a ellipse node labeled &#x27;V4&#x27;.">
 <pre class="flowchart-title">Flowchart from flow55, page 2</pre>
-<div class="mermaid">
-graph TD
-V1((V1)) <--> |Not Equal| V3((V3))
-V3((V3)) --> |Not Equal| V4((V4))
-V4((V4)) <--> |Not Equal| V2((V2))
-V2((V2)) --> |Not Equal| V1((V1))
-V1((V1)) --> |Not Equal| V4((V4))
-</div>
+<img src="original_dataset\flow55.png" alt="The flowchart is oriented top to bottom. Node V1 is a ellipse node labeled &#x27;V1&#x27;. Node V2 is a ellipse node labeled &#x27;V2&#x27;. Node V3 is a ellipse node labeled &#x27;V3&#x27;. Node V4 is a ellipse node labeled &#x27;V4&#x27;." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node A is a ellipse node labeled &#x27;A&#x27;. Node B is a ellipse node labeled &#x27;B&#x27;. Node C is a ellipse node labeled &#x27;C&#x27;. Node D is a ellipse node labeled &#x27;D&#x27;. Node E is a ellipse node labeled &#x27;E&#x27;.">
 <pre class="flowchart-title">Flowchart from flow56, page 16</pre>
-<div class="mermaid">
-graph TD
-A((A)) --> B((B))
-A((A)) --> C((C))
-B((B)) --> D((D))
-C((C)) --> D((D))
-C((C)) --> E((E))
-</div>
+<img src="original_dataset\flow56.png" alt="The flowchart is oriented top to bottom. Node A is a ellipse node labeled &#x27;A&#x27;. Node B is a ellipse node labeled &#x27;B&#x27;. Node C is a ellipse node labeled &#x27;C&#x27;. Node D is a ellipse node labeled &#x27;D&#x27;. Node E is a ellipse node labeled &#x27;E&#x27;." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node Alarm is a ellipse node labeled &#x27;Alarm&#x27;. Node Burglary is a ellipse node labeled &#x27;Burglary&#x27;. Node Earthquake is a ellipse node labeled &#x27;Earthquake&#x27;. Node PhoneCall is a ellipse node labeled &#x27;PhoneCall&#x27;. Node RadioReport is a ellipse node labeled &#x27;RadioReport&#x27;.">
 <pre class="flowchart-title">Flowchart from flow57, page 17</pre>
-<div class="mermaid">
-graph TD
-Burglary([Burglary]) --> Alarm([Alarm])
-Earthquake([Earthquake]) --> Alarm([Alarm])
-Earthquake([Earthquake]) --> RadioReport([RadioReport])
-Alarm([Alarm]) --> PhoneCall([PhoneCall])
-</div>
+<img src="original_dataset\flow57.png" alt="The flowchart is oriented top to bottom. Node Alarm is a ellipse node labeled &#x27;Alarm&#x27;. Node Burglary is a ellipse node labeled &#x27;Burglary&#x27;. Node Earthquake is a ellipse node labeled &#x27;Earthquake&#x27;. Node PhoneCall is a ellipse node labeled &#x27;PhoneCall&#x27;. Node RadioReport is a ellipse node labeled &#x27;RadioReport&#x27;." />
 </div>
 
-<div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom.">
+<div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node CentralProcessingUnit is a rectangle node labeled &#x27;Central Processing Unit (CPU&#x27;. Node InputOutputDevices is a rectangle node labeled &#x27;Input/Output (IO) Devices&#x27;. Node Memory is a rectangle node labeled &#x27;Memory&#x27;.">
 <pre class="flowchart-title">Flowchart from flow58, page 4</pre>
-<div class="mermaid">
-graph TD
-  Memory --> CentralProcessingUnit
-  CentralProcessingUnit --> Memory
-  CentralProcessingUnit --> InputOutputDevices
-  InputOutputDevices --> CentralProcessingUnit
+<img src="original_dataset\flow58.png" alt="The flowchart is oriented top to bottom. Node CentralProcessingUnit is a rectangle node labeled &#x27;Central Processing Unit (CPU&#x27;. Node InputOutputDevices is a rectangle node labeled &#x27;Input/Output (IO) Devices&#x27;. Node Memory is a rectangle node labeled &#x27;Memory&#x27;." />
 </div>
-</div>
+
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node ByteCode is a rectangle node labeled &#x27;.class&#x27;. It is pointed to by node javac. Node SourceCode is a rectangle node labeled &#x27;.java&#x27;. Node java is a ellipse node labeled &#x27;java&#x27;. Node javac is a ellipse node labeled &#x27;javac&#x27;. It points to node ByteCode.">
-<pre class="flowchart-title">Flowchart from flow59, page 8</pre>
-<div class="mermaid">
-graph TD
-    SourceCode[.java] --> javac((javac))
-    javac --> ByteCode[.class]
-    ByteCode[.class] --> java((java))
-</div>
+<pre class="flowchart-title">Flowchart from flow59, page 4</pre>
+<img src="original_dataset\flow59png.png" alt="The flowchart is oriented top to bottom. Node ByteCode is a rectangle node labeled &#x27;.class&#x27;. It is pointed to by node javac. Node SourceCode is a rectangle node labeled &#x27;.java&#x27;. Node java is a ellipse node labeled &#x27;java&#x27;. Node javac is a ellipse node labeled &#x27;javac&#x27;. It points to node ByteCode." />
 </div>
 
-<div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node DM is a ellipse node labeled &#x27;D-&#x27;. It points &#x27;&quot;FP = p(T+&#x27; to node D, &#x27;&quot;TN = p(T-&#x27; to node D. It is pointed to by node DQ. Node DP is a ellipse node labeled &#x27;D+&#x27;. It points &#x27;&quot;TP = p(T+&#x27; to node D, &#x27;&quot;FN = p(T-&#x27; to node D. It is pointed to by node DQ. Node DQ is a ellipse node labeled &#x27;D?&#x27;. It points &#x27;&quot;p(D+)&quot;&#x27; to node DP, &#x27;&quot;p(D-) = 1 - p(D+)&quot;&#x27; to node DM. Node FN_neg is a ellipse node labeled &#x27;FN = T-&#x27;. Node FP_pos is a ellipse node labeled &#x27;FP = T+&#x27;. Node TN_neg is a ellipse node labeled &#x27;TN = T-&#x27;. Node TP_pos is a ellipse node labeled &#x27;TP = T+&#x27;. Node p is a ellipse node labeled &#x27;T-|D-&#x27;.">
+
+<div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node DM is a ellipse node labeled &#x27;D-&#x27;. It points &#x27;FP = p(T+&#x27; to node D, &#x27;TN = p(T-&#x27; to node D. It is pointed to by node DQ. Node DP is a ellipse node labeled &#x27;D+&#x27;. It points &#x27;TP = p(T+&#x27; to node D, &#x27;FN = p(T-&#x27; to node D. It is pointed to by node DQ. Node DQ is a ellipse node labeled &#x27;D?&#x27;. It points &#x27;p(D+)&#x27; to node DP, &#x27;p(D-) = 1 - p(D+)&#x27; to node DM. Node FN is a ellipse node labeled &#x27;T-&#x27;. Node FP is a ellipse node labeled &#x27;T+&#x27;. Node TN is a ellipse node labeled &#x27;T-&#x27;. Node TP is a ellipse node labeled &#x27;T+&#x27;. Node p is a ellipse node labeled &#x27;T-|D-&#x27;.">
 <pre class="flowchart-title">Flowchart from flow60, page 10</pre>
-<div class="mermaid">
-graph TD
-    classDef blueCircle fill:#cce5ff,stroke:#0366d6,stroke-width:1px,color:#000;
-
-    DQ((D?))
-    DP((D+))
-    DM((D-))
-    TP_pos([TP = T+])
-    FN_neg([FN = T-])
-    FP_pos([FP = T+])
-    TN_neg([TN = T-])
-
-    class DQ,DP,DM,TP_pos,FN_neg,FP_pos,TN_neg blueCircle;
-
-    DQ -->|"p(D+)"| DP
-    DQ -->|"p(D-) = 1 - p(D+)"| DM
-
-    DP -->|"TP = p(T+|D+)"| TP_pos
-    DP -->|"FN = p(T-|D+)"| FN_neg
-
-    DM -->|"FP = p(T+|D-)"| FP_pos
-    DM -->|"TN = p(T-|D-)"| TN_neg
-</div>
+<img src="original_dataset\flow60.png" alt="The flowchart is oriented top to bottom. Node DM is a ellipse node labeled &#x27;D-&#x27;. It points &#x27;FP = p(T+&#x27; to node D, &#x27;TN = p(T-&#x27; to node D. It is pointed to by node DQ. Node DP is a ellipse node labeled &#x27;D+&#x27;. It points &#x27;TP = p(T+&#x27; to node D, &#x27;FN = p(T-&#x27; to node D. It is pointed to by node DQ. Node DQ is a ellipse node labeled &#x27;D?&#x27;. It points &#x27;p(D+)&#x27; to node DP, &#x27;p(D-) = 1 - p(D+)&#x27; to node DM. Node FN is a ellipse node labeled &#x27;T-&#x27;. Node FP is a ellipse node labeled &#x27;T+&#x27;. Node TN is a ellipse node labeled &#x27;T-&#x27;. Node TP is a ellipse node labeled &#x27;T+&#x27;. Node p is a ellipse node labeled &#x27;T-|D-&#x27;." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node A is a ellipse node labeled &#x27;A&#x27;. Node E is a ellipse node labeled &#x27;E&#x27;. Node I is a ellipse node labeled &#x27;I&#x27;.">
 <pre class="flowchart-title">Flowchart from flow61, page 4</pre>
-<div class="mermaid">
-graph TD
-A((A))--->I((I))
-E((E)) --->I
-</div>
+<img src="original_dataset\flow61.png" alt="The flowchart is oriented top to bottom. Node A is a ellipse node labeled &#x27;A&#x27;. Node E is a ellipse node labeled &#x27;E&#x27;. Node I is a ellipse node labeled &#x27;I&#x27;." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node A is a ellipse node labeled &#x27;A&#x27;. Node B is a ellipse node labeled &#x27;B&#x27;. Node C is a ellipse node labeled &#x27;C&#x27;.">
 <pre class="flowchart-title">Flowchart from flow62, page 17</pre>
-<div class="mermaid">
-graph TD
-    B((B))--> A((A))
-    C((C))--> A((A))
-</div>
+<img src="original_dataset\flow62.png" alt="The flowchart is oriented top to bottom. Node A is a ellipse node labeled &#x27;A&#x27;. Node B is a ellipse node labeled &#x27;B&#x27;. Node C is a ellipse node labeled &#x27;C&#x27;." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node A is a ellipse node labeled &#x27;A&#x27;. Node B is a ellipse node labeled &#x27;B&#x27;. Node C is a ellipse node labeled &#x27;C&#x27;.">
 <pre class="flowchart-title">Flowchart from flow63, page 17</pre>
-<div class="mermaid">
-graph TD
-    C((C))--> B((B))
-    B((B))-->A((A))
-    C((C))--> A((A))
-</div>
+<img src="original_dataset\flow63.png" alt="The flowchart is oriented top to bottom. Node A is a ellipse node labeled &#x27;A&#x27;. Node B is a ellipse node labeled &#x27;B&#x27;. Node C is a ellipse node labeled &#x27;C&#x27;." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node A is a ellipse node labeled &#x27;A&#x27;. Node B is a ellipse node labeled &#x27;B&#x27;. Node C is a ellipse node labeled &#x27;C&#x27;.">
 <pre class="flowchart-title">Flowchart from flow64, page 17</pre>
-<div class="mermaid">
-graph TD
-    C((C)) --> B((B))
-    C((C))--> A((A))
-</div>
+<img src="original_dataset\flow64.png" alt="The flowchart is oriented top to bottom. Node A is a ellipse node labeled &#x27;A&#x27;. Node B is a ellipse node labeled &#x27;B&#x27;. Node C is a ellipse node labeled &#x27;C&#x27;." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node A is a ellipse node labeled &#x27;A&#x27;. Node B is a ellipse node labeled &#x27;B&#x27;. Node C is a ellipse node labeled &#x27;C&#x27;.">
 <pre class="flowchart-title">Flowchart from flow65, page 17</pre>
-<div class="mermaid">
-graph TD
-    C((C))--> B((B))
-    B((B))--> A((A))
-</div>
+<img src="original_dataset\flow65.png" alt="The flowchart is oriented top to bottom. Node A is a ellipse node labeled &#x27;A&#x27;. Node B is a ellipse node labeled &#x27;B&#x27;. Node C is a ellipse node labeled &#x27;C&#x27;." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node C is a ellipse node labeled &#x27;C&#x27;. Node R is a ellipse node labeled &#x27;R&#x27;. Node V is a ellipse node labeled &#x27;V&#x27;.">
 <pre class="flowchart-title">Flowchart from flow66, page 26</pre>
-<div class="mermaid">
-graph TD
-    V((V))--> C((C))
-    R((R))--> C((C))
-</div>
+<img src="original_dataset\flow66.png" alt="The flowchart is oriented top to bottom. Node C is a ellipse node labeled &#x27;C&#x27;. Node R is a ellipse node labeled &#x27;R&#x27;. Node V is a ellipse node labeled &#x27;V&#x27;." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node C is a ellipse node labeled &#x27;C&#x27;. It is pointed to by nodes G, T. Node G is a ellipse node labeled &#x27;G&#x27;. It points to node C. Node S is a ellipse node labeled &#x27;S&#x27;. It points to node T. It is pointed to by node blue. Node T is a ellipse node labeled &#x27;T&#x27;. It points to node C. It is pointed to by node S.">
 <pre class="flowchart-title">Flowchart from flow67, page 28</pre>
-<div class="mermaid">
-graph TD
-    G((G)):::blue --> S((S)):::blue
-    G --> C((C)):::blue
-    S --> T((T)):::maroon
-    T --> C
-    linkStyle 0,2,3 stroke:red,stroke-width:2px;
-    classDef blue fill:#2196F3,stroke:#333,color:#FFFFFF;
-    classDef maroon fill:#8B0000,stroke:#333,color:#FFFFFF;
-</div>
+<img src="original_dataset\flow67.png" alt="The flowchart is oriented top to bottom. Node C is a ellipse node labeled &#x27;C&#x27;. It is pointed to by nodes G, T. Node G is a ellipse node labeled &#x27;G&#x27;. It points to node C. Node S is a ellipse node labeled &#x27;S&#x27;. It points to node T. It is pointed to by node blue. Node T is a ellipse node labeled &#x27;T&#x27;. It points to node C. It is pointed to by node S." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node C is a ellipse node labeled &#x27;C&#x27;. Node S is a ellipse node labeled &#x27;S&#x27;.">
 <pre class="flowchart-title">Flowchart from flow68, page 30</pre>
-<div class="mermaid">
-graph TD
-    S((S)) --> C((C))
-</div>
+<img src="original_dataset\flow68.png" alt="The flowchart is oriented top to bottom. Node C is a ellipse node labeled &#x27;C&#x27;. Node S is a ellipse node labeled &#x27;S&#x27;." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node 1 is a ellipse node labeled &#x27;1&#x27;. It points to node 8. Node 2 is a ellipse node labeled &#x27;2&#x27;. It points to node 6. It is pointed to by node 4. Node 3 is a ellipse node labeled &#x27;3&#x27;. It points to node 6, to node 7. Node 4 is a ellipse node labeled &#x27;4&#x27;. It points to node 2. It is pointed to by node S. Node 5 is a ellipse node labeled &#x27;5&#x27;. It points to node 8, to node T. Node 6 is a ellipse node labeled &#x27;6&#x27;. It points to node C. It is pointed to by nodes 2, 3, T. Node 7 is a ellipse node labeled &#x27;7&#x27;. It points to node C. It is pointed to by node 3. Node 8 is a ellipse node labeled &#x27;8&#x27;. It points to node S. It is pointed to by nodes 1, 5. Node C is a ellipse node labeled &#x27;C&#x27;. It is pointed to by nodes 6, 7. Node S is a ellipse node labeled &#x27;S&#x27;. It points to node T, to node 4. It is pointed to by node 8. Node T is a ellipse node labeled &#x27;T&#x27;. It points to node 6. It is pointed to by nodes S, 5.">
 <pre class="flowchart-title">Flowchart from flow69, page 33</pre>
-<div class="mermaid">
-graph TD
-
-%% Nodes
-S((S))
-T((T))
-C((C))
-
-1((1))
-2((2))
-3((3))
-4((4))
-5((5))
-6((6))
-7((7))
-8((8))
-
-%% Edges
-S --> T
-S --> 4
-1 --> 8
-5 --> 8
-5 --> T
-6 --> C
-7 --> C
-2 --> 6
-3 --> 6
-3 --> 7
-4 --> 2
-8 --> S
-T --> 6
-
-%% Styling Nodes
-classDef green fill:#228B22,color:white,stroke:#000;
-classDef blue fill:#4682B4,color:white,stroke:#000;
-classDef red fill:#8B0000,color:white,stroke:#000;
-classDef gray fill:gray,color:white,stroke:#000;
-classDef blackborder stroke:#000,stroke-width:3px;
-
-%% Apply Classes
-class S,C,T blue;
-class 1,2,3 green;
-class 4,5,6,7 red;
-class 8 gray;
-class 6 blackborder;
-</div>
+<img src="original_dataset\flow69.png" alt="The flowchart is oriented top to bottom. Node 1 is a ellipse node labeled &#x27;1&#x27;. It points to node 8. Node 2 is a ellipse node labeled &#x27;2&#x27;. It points to node 6. It is pointed to by node 4. Node 3 is a ellipse node labeled &#x27;3&#x27;. It points to node 6, to node 7. Node 4 is a ellipse node labeled &#x27;4&#x27;. It points to node 2. It is pointed to by node S. Node 5 is a ellipse node labeled &#x27;5&#x27;. It points to node 8, to node T. Node 6 is a ellipse node labeled &#x27;6&#x27;. It points to node C. It is pointed to by nodes 2, 3, T. Node 7 is a ellipse node labeled &#x27;7&#x27;. It points to node C. It is pointed to by node 3. Node 8 is a ellipse node labeled &#x27;8&#x27;. It points to node S. It is pointed to by nodes 1, 5. Node C is a ellipse node labeled &#x27;C&#x27;. It is pointed to by nodes 6, 7. Node S is a ellipse node labeled &#x27;S&#x27;. It points to node T, to node 4. It is pointed to by node 8. Node T is a ellipse node labeled &#x27;T&#x27;. It points to node 6. It is pointed to by nodes S, 5." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node 1 is a ellipse node labeled &#x27;1&#x27;. It points to node S. Node 2 is a ellipse node labeled &#x27;2&#x27;. It points to node 6. It is pointed to by node 4. Node 3 is a ellipse node labeled &#x27;3&#x27;. It points to node 6, to node 7. Node 4 is a ellipse node labeled &#x27;4&#x27;. It points to node 2. It is pointed to by node S. Node 5 is a ellipse node labeled &#x27;5&#x27;. It points to node T. Node 6 is a ellipse node labeled &#x27;6&#x27;. It points to node C. It is pointed to by nodes 2, 3, T. Node 7 is a ellipse node labeled &#x27;7&#x27;. It points to node C. It is pointed to by node 3. Node C is a ellipse node labeled &#x27;C&#x27;. It is pointed to by nodes 6, 7. Node S is a ellipse node labeled &#x27;S&#x27;. It points to node 4. It is pointed to by node 1. Node T is a ellipse node labeled &#x27;T&#x27;. It points to node 6. It is pointed to by nodes gray, 5.">
 <pre class="flowchart-title">Flowchart from flow70, page 34</pre>
-<div class="mermaid">
-graph TD
-
-%% Nodes
-S((S))
-T((T))
-C((C))
-
-1((1))
-2((2))
-3((3))
-4((4))
-5((5))
-6((6))
-7((7))
-
-%% Edges
-S --gray--> T
-S --> 4
-1 --> S
-5 --> T
-6 --> C
-7 --> C
-2 --> 6
-3 --> 6
-3 --> 7
-4 --> 2
-T --> 6
-
-%% Styling Nodes
-classDef green fill:#228B22,color:white,stroke:#000;
-classDef blue fill:#4682B4,color:white,stroke:#000;
-classDef red fill:#8B0000,color:white,stroke:#000;
-classDef blackborder stroke:#000,stroke-width:3px;
-classDef grayedge stroke:gray,stroke-width:2px;
-
-%% Apply Classes
-class S,C,T blue;
-class 1,2,3 green;
-class 4,5,6,7 red;
-class 6 blackborder;
-</div>
+<img src="original_dataset\flow70.png" alt="The flowchart is oriented top to bottom. Node 1 is a ellipse node labeled &#x27;1&#x27;. It points to node S. Node 2 is a ellipse node labeled &#x27;2&#x27;. It points to node 6. It is pointed to by node 4. Node 3 is a ellipse node labeled &#x27;3&#x27;. It points to node 6, to node 7. Node 4 is a ellipse node labeled &#x27;4&#x27;. It points to node 2. It is pointed to by node S. Node 5 is a ellipse node labeled &#x27;5&#x27;. It points to node T. Node 6 is a ellipse node labeled &#x27;6&#x27;. It points to node C. It is pointed to by nodes 2, 3, T. Node 7 is a ellipse node labeled &#x27;7&#x27;. It points to node C. It is pointed to by node 3. Node C is a ellipse node labeled &#x27;C&#x27;. It is pointed to by nodes 6, 7. Node S is a ellipse node labeled &#x27;S&#x27;. It points to node 4. It is pointed to by node 1. Node T is a ellipse node labeled &#x27;T&#x27;. It points to node 6. It is pointed to by nodes gray, 5." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node A is a rectangle node labeled &#x27;Raw Data&#x27;. It points to node C. Node B is a rectangle node labeled &#x27;Distance or&lt;br&gt;Similarity Matrix&#x27;. It points to node C, to node D. It is pointed to by node green. Node C is a rectangle node labeled &#x27;Dimensionality&lt;br&gt;Reduction&lt;br&gt;-- MDS&lt;br&gt;-- Wavelet&#x27;. It points to node E. It is pointed to by nodes A, B. Node D is a rectangle node labeled &#x27;Clustering&lt;br&gt;-- Hierarchical&lt;br&gt;-- Non-hierar.&#x27;. It points to node E. It is pointed to by node B. Node E is a rectangle node labeled &#x27;Graphical&lt;br&gt;Representation&#x27;. It points to node F. It is pointed to by nodes C, D. Node F is a rectangle node labeled &#x27;&quot;Validation&quot;&lt;br&gt;-- Internal&lt;br&gt;-- External&#x27;. It is pointed to by node E.">
 <pre class="flowchart-title">Flowchart from flow71, page 8</pre>
-<div class="mermaid">
-graph TD
-        A[Raw Data]:::green --> B[Distance or<br>Similarity Matrix]:::yellow
-        A --> C[Dimensionality<br>Reduction<br>-- MDS<br>-- Wavelet]:::yellow
-        B --> C
-        B --> D[Clustering<br>-- Hierarchical<br>-- Non-hierar.]:::cyan
-        C --> E[Graphical<br>Representation]:::pink
-        D --> E
-        E --> F["Validation"<br>-- Internal<br>-- External]:::black
-    
-    classDef green fill:#90EE90,stroke:#333,stroke-width:2px;
-    classDef yellow fill:#FFFFCC,stroke:#333,stroke-width:2px;
-    classDef pink fill:#FFCCCC,stroke:#333,stroke-width:2px;
-    classDef cyan fill:#CCFFFF,stroke:#333,stroke-width:2px;
-    classDef black fill:#333333,color:#FFFFFF,stroke:#FFFFFF,stroke-width:2px;
-</div>
+<img src="original_dataset\flow71.png" alt="The flowchart is oriented top to bottom. Node A is a rectangle node labeled &#x27;Raw Data&#x27;. It points to node C. Node B is a rectangle node labeled &#x27;Distance or&lt;br&gt;Similarity Matrix&#x27;. It points to node C, to node D. It is pointed to by node green. Node C is a rectangle node labeled &#x27;Dimensionality&lt;br&gt;Reduction&lt;br&gt;-- MDS&lt;br&gt;-- Wavelet&#x27;. It points to node E. It is pointed to by nodes A, B. Node D is a rectangle node labeled &#x27;Clustering&lt;br&gt;-- Hierarchical&lt;br&gt;-- Non-hierar.&#x27;. It points to node E. It is pointed to by node B. Node E is a rectangle node labeled &#x27;Graphical&lt;br&gt;Representation&#x27;. It points to node F. It is pointed to by nodes C, D. Node F is a rectangle node labeled &#x27;&quot;Validation&quot;&lt;br&gt;-- Internal&lt;br&gt;-- External&#x27;. It is pointed to by node E." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node 1 is a ellipse node labeled &#x27;1&#x27;. It points to node 4. Node 2 is a ellipse node labeled &#x27;2&#x27;. It points to node 3. It is pointed to by node 4. Node 3 is a ellipse node labeled &#x27;3&#x27;. It is pointed to by nodes 2, 4. Node 4 is a ellipse node labeled &#x27;4&#x27;. It points to node 2, to node 3. It is pointed to by node 1.">
 <pre class="flowchart-title">Flowchart from flow72, page 5</pre>
-<div class="mermaid">
-graph TD
-    1((1)) <--> 2((2))
-    1 --> 4((4))
-    4 --> 2
-    2 --> 3((3))
-    4 --> 3
-</div>
+<img src="original_dataset\flow72.png" alt="The flowchart is oriented top to bottom. Node 1 is a ellipse node labeled &#x27;1&#x27;. It points to node 4. Node 2 is a ellipse node labeled &#x27;2&#x27;. It points to node 3. It is pointed to by node 4. Node 3 is a ellipse node labeled &#x27;3&#x27;. It is pointed to by nodes 2, 4. Node 4 is a ellipse node labeled &#x27;4&#x27;. It points to node 2, to node 3. It is pointed to by node 1." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented left to right. Node H1 is a rectangle node labeled &#x27;H1&#x27;. It points to node M1, to node M2, to node M3, to node M4. Node H2 is a rectangle node labeled &#x27;H2&#x27;. It is pointed to by nodes M3, M4, M5, M6. Node M1 is a ellipse node labeled &#x27;M1&#x27;. It is pointed to by node H1. Node M2 is a ellipse node labeled &#x27;M2&#x27;. It is pointed to by node H1. Node M3 is a ellipse node labeled &#x27;M3&#x27;. It points to node H2. It is pointed to by node H1. Node M4 is a ellipse node labeled &#x27;M4&#x27;. It points to node H2. It is pointed to by node H1. Node M5 is a ellipse node labeled &#x27;M5&#x27;. It points to node H2. Node M6 is a ellipse node labeled &#x27;M6&#x27;. It points to node H2.">
 <pre class="flowchart-title">Flowchart from flow74, page 18</pre>
-<div class="mermaid">
-graph LR
-    %% Node styles
-    style H1 fill:#FF6600,stroke:#333,stroke-width:1px
-    style H2 fill:#FF6600,stroke:#333,stroke-width:1px
-    style M1 fill:#FFFF99,stroke:#333,stroke-width:1px
-    style M2 fill:#FFFF99,stroke:#333,stroke-width:1px
-    style M3 fill:#FFFF99,stroke:#333,stroke-width:1px
-    style M4 fill:#FFFF99,stroke:#333,stroke-width:1px
-    style M5 fill:#FFFF99,stroke:#333,stroke-width:1px
-    style M6 fill:#FFFF99,stroke:#333,stroke-width:1px
-
-    %% Shapes
-    H1[H1]
-    H2[H2]
-    M1((M1))
-    M2((M2))
-    M3((M3))
-    M4((M4))
-    M5((M5))
-    M6((M6))
-
-    %% Arrows
-    H1 --> M1
-    H1 --> M2
-    H1 --> M3
-    H1 --> M4
-
-    M3 --> H2
-    M4 --> H2
-    M5 --> H2
-    M6 --> H2
-</div>
+<img src="original_dataset\flow74.png" alt="The flowchart is oriented left to right. Node H1 is a rectangle node labeled &#x27;H1&#x27;. It points to node M1, to node M2, to node M3, to node M4. Node H2 is a rectangle node labeled &#x27;H2&#x27;. It is pointed to by nodes M3, M4, M5, M6. Node M1 is a ellipse node labeled &#x27;M1&#x27;. It is pointed to by node H1. Node M2 is a ellipse node labeled &#x27;M2&#x27;. It is pointed to by node H1. Node M3 is a ellipse node labeled &#x27;M3&#x27;. It points to node H2. It is pointed to by node H1. Node M4 is a ellipse node labeled &#x27;M4&#x27;. It points to node H2. It is pointed to by node H1. Node M5 is a ellipse node labeled &#x27;M5&#x27;. It points to node H2. Node M6 is a ellipse node labeled &#x27;M6&#x27;. It points to node H2." />
 </div>
 
-<div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node C is a rectangle node labeled &#x27;Causally and Associationally Related Hyps&#x27;. Node D is a rectangle node labeled &#x27;Differential Diagnosis Heuristics&#x27;. Node Hypothesis is a ellipse node labeled &#x27;Hypothesis&#x27;. Node L is a rectangle node labeled &#x27;Logical Criteria&#x27;. Node M is a rectangle node labeled &#x27;Manifestations&#x27;. Node P is a rectangle node labeled &#x27;Probabilistic Scoring Function&#x27;. Node T is a rectangle node labeled &#x27;Triggers&#x27;.">
+<div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node C is a rectangle node labeled &#x27;Causally and Associationally Related Hyps&#x27;. Node D is a rectangle node labeled &#x27;Differential Diagnosis Heuristics&#x27;. Node L is a rectangle node labeled &#x27;Logical Criteria&#x27;. Node M is a rectangle node labeled &#x27;Manifestations&#x27;. Node P is a rectangle node labeled &#x27;Probabilistic Scoring Function&#x27;. Node T is a rectangle node labeled &#x27;Triggers&#x27;.">
 <pre class="flowchart-title">Flowchart from flow75, page 24</pre>
-<div class="mermaid">
-graph TD
-    C[Causally and Associationally Related Hyps] --> Hypothesis((Hypothesis))
-    P[Probabilistic Scoring Function] --> Hypothesis
-    D[Differential Diagnosis Heuristics] --> Hypothesis
-    L[Logical Criteria] --> Hypothesis
-    M[Manifestations] --> Hypothesis
-    T[Triggers] --> Hypothesis
-</div>
+<img src="original_dataset\flow75.png" alt="The flowchart is oriented top to bottom. Node C is a rectangle node labeled &#x27;Causally and Associationally Related Hyps&#x27;. Node D is a rectangle node labeled &#x27;Differential Diagnosis Heuristics&#x27;. Node L is a rectangle node labeled &#x27;Logical Criteria&#x27;. Node M is a rectangle node labeled &#x27;Manifestations&#x27;. Node P is a rectangle node labeled &#x27;Probabilistic Scoring Function&#x27;. Node T is a rectangle node labeled &#x27;Triggers&#x27;." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node A is a ellipse node labeled &#x27;A&#x27;. It points to node C. Node B is a ellipse node labeled &#x27;B&#x27;. It points to node D, to node E. Node C is a ellipse node labeled &#x27;C&#x27;. It is pointed to by node A. Node D is a ellipse node labeled &#x27;D&#x27;. It is pointed to by node B. Node E is a ellipse node labeled &#x27;E&#x27;. It is pointed to by node B.">
 <pre class="flowchart-title">Flowchart from flow76, page 7</pre>
-<div class="mermaid">
-graph TD
-    A((A)) --> B((B))
-    A --> C((C))
-    B --> D((D))
-    B --> E((E))
-
-    %% Node styling
-    style A fill:#3399FF,stroke:#000,stroke-width:1px
-    style B fill:#3399FF,stroke:#000,stroke-width:1px
-    style C fill:#3399FF,stroke:#000,stroke-width:1px
-    style D fill:#3399FF,stroke:#000,stroke-width:1px
-    style E fill:#3399FF,stroke:#000,stroke-width:1px
-</div>
+<img src="original_dataset\flow76.png" alt="The flowchart is oriented top to bottom. Node A is a ellipse node labeled &#x27;A&#x27;. It points to node C. Node B is a ellipse node labeled &#x27;B&#x27;. It points to node D, to node E. Node C is a ellipse node labeled &#x27;C&#x27;. It is pointed to by node A. Node D is a ellipse node labeled &#x27;D&#x27;. It is pointed to by node B. Node E is a ellipse node labeled &#x27;E&#x27;. It is pointed to by node B." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node A is a ellipse node labeled &#x27;A&#x27;. Node B is a ellipse node labeled &#x27;B&#x27;. It points to node D, to node E. It is pointed to by node blue. Node C is a ellipse node labeled &#x27;C&#x27;. Node D is a ellipse node labeled &#x27;D&#x27;. It is pointed to by node B. Node E is a ellipse node labeled &#x27;E&#x27;. It is pointed to by nodes B, blue.">
 <pre class="flowchart-title">Flowchart from flow77, page 7</pre>
-<div class="mermaid">
-graph TD
-    A((A)):::blue --> B((B)):::blue
-    B --> D((D)):::blue
-    B --> E((E)):::blue
-    C((C)):::blue --> E:::blue
-
-    classDef blue fill:#6495ED,stroke:#333;
-;
-</div>
+<img src="original_dataset\flow77.png" alt="The flowchart is oriented top to bottom. Node A is a ellipse node labeled &#x27;A&#x27;. Node B is a ellipse node labeled &#x27;B&#x27;. It points to node D, to node E. It is pointed to by node blue. Node C is a ellipse node labeled &#x27;C&#x27;. Node D is a ellipse node labeled &#x27;D&#x27;. It is pointed to by node B. Node E is a ellipse node labeled &#x27;E&#x27;. It is pointed to by nodes B, blue." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node A is a ellipse node labeled &#x27;A&#x27;. It points to node C. Node B is a ellipse node labeled &#x27;B&#x27;. It points to node E. Node C is a ellipse node labeled &#x27;C&#x27;. It is pointed to by node A. Node D is a ellipse node labeled &#x27;D&#x27;. Node E is a ellipse node labeled &#x27;E&#x27;. It is pointed to by node B.">
 <pre class="flowchart-title">Flowchart from flow78, page 7</pre>
-<div class="mermaid">
-graph TD
-    A((A)):::blue ---> B((B)):::blue
-    A --> C((C)):::blue
-    B ---> D((D)):::blue
-    B --> E((E)):::blue
-    C ---> E:::blue
-
-    classDef blue fill:#6A5ACD,stroke:#000,stroke-width:2px;
-;
-</div>
+<img src="original_dataset\flow78.png" alt="The flowchart is oriented top to bottom. Node A is a ellipse node labeled &#x27;A&#x27;. It points to node C. Node B is a ellipse node labeled &#x27;B&#x27;. It points to node E. Node C is a ellipse node labeled &#x27;C&#x27;. It is pointed to by node A. Node D is a ellipse node labeled &#x27;D&#x27;. Node E is a ellipse node labeled &#x27;E&#x27;. It is pointed to by node B." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node A is a ellipse node labeled &#x27;A&#x27;. It is pointed to by node blue. Node B is a ellipse node labeled &#x27;B&#x27;. It is pointed to by node C. Node C is a ellipse node labeled &#x27;C&#x27;. It points to node B.">
 <pre class="flowchart-title">Flowchart from flow79, page 13</pre>
-<div class="mermaid">
-graph TD
-    C((C)):::blue --> A((A)):::blue
-    C --> B((B)):::blue
-
-    classDef blue fill:#6495ED,stroke:#333;
-</div>
+<img src="original_dataset\flow79.png" alt="The flowchart is oriented top to bottom. Node A is a ellipse node labeled &#x27;A&#x27;. It is pointed to by node blue. Node B is a ellipse node labeled &#x27;B&#x27;. It is pointed to by node C. Node C is a ellipse node labeled &#x27;C&#x27;. It points to node B." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node Age is a ellipse node labeled &#x27;Age&#x27;. It points to node L. Node L is a ellipse node labeled &#x27;Literacy&#x27;. It is pointed to by node Age. Node T is a ellipse node labeled &#x27;T-shirt&#x27;. It is pointed to by node blue.">
 <pre class="flowchart-title">Flowchart from flow80, page 16</pre>
-<div class="mermaid">
-graph TD
-    Age((Age)):::blue --> T((T-shirt)):::blue
-    Age --> L((Literacy)):::blue
-
-    classDef blue fill:#6495ED,stroke:#333;
-</div>
+<img src="original_dataset\flow80.png" alt="The flowchart is oriented top to bottom. Node Age is a ellipse node labeled &#x27;Age&#x27;. It points to node L. Node L is a ellipse node labeled &#x27;Literacy&#x27;. It is pointed to by node Age. Node T is a ellipse node labeled &#x27;T-shirt&#x27;. It is pointed to by node blue." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node A is a ellipse node labeled &#x27;A&#x27;. It points to node D. Node B is a ellipse node labeled &#x27;B&#x27;. Node C is a ellipse node labeled &#x27;C&#x27;. It is pointed to by node blue. Node D is a ellipse node labeled &#x27;D&#x27;. It points to node F, to node G. It is pointed to by nodes A, blue. Node E is a ellipse node labeled &#x27;E&#x27;. It points to node G. Node F is a ellipse node labeled &#x27;F&#x27;. It is pointed to by node D. Node G is a ellipse node labeled &#x27;G&#x27;. It is pointed to by nodes D, E.">
 <pre class="flowchart-title">Flowchart from flow81, page 36</pre>
-<div class="mermaid">
-graph TD
-    A((A)):::blue --> C((C)):::blue
-    A --> D((D)):::blue
-    B((B)):::blue --> D
-    B --(red)--> E((E)):::blue
-    D --> F((F)):::blue
-    D --> G((G)):::blue
-    E --> G
-    linkStyle 3 stroke:red,stroke-width:2px;
-    classDef blue fill:#6495ED,stroke:#333;
-</div>
+<img src="original_dataset\flow81.png" alt="The flowchart is oriented top to bottom. Node A is a ellipse node labeled &#x27;A&#x27;. It points to node D. Node B is a ellipse node labeled &#x27;B&#x27;. Node C is a ellipse node labeled &#x27;C&#x27;. It is pointed to by node blue. Node D is a ellipse node labeled &#x27;D&#x27;. It points to node F, to node G. It is pointed to by nodes A, blue. Node E is a ellipse node labeled &#x27;E&#x27;. It points to node G. Node F is a ellipse node labeled &#x27;F&#x27;. It is pointed to by node D. Node G is a ellipse node labeled &#x27;G&#x27;. It is pointed to by nodes D, E." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented left to right. Node A is a rectangle node labeled &#x27;&quot;def main(): html = browser_load_url(URL)&quot;&#x27;. It is pointed to by node reply. Node B is a rectangle node labeled &#x27;&quot;def server_load_url(): ... return html&quot;&#x27;. It is pointed to by node request.">
 <pre class="flowchart-title">Flowchart from flow83, page 7</pre>
-<div class="mermaid">
-flowchart TD
-    A["def main(): html = browser_load_url(URL)"]
-    B["def server_load_url(): ... return html"]
-
-    A -- request --> B
-    B -- reply --> A
-</div>
+<img src="original_dataset\flow83.png" alt="The flowchart is oriented left to right. Node A is a rectangle node labeled &#x27;&quot;def main(): html = browser_load_url(URL)&quot;&#x27;. It is pointed to by node reply. Node B is a rectangle node labeled &#x27;&quot;def server_load_url(): ... return html&quot;&#x27;. It is pointed to by node request." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented left to right. Node A is a rectangle node labeled &#x27;&quot;def main(): html = browser_load_url(URL)&quot;&#x27;. It points to node B. It is pointed to by node B. Node B is a rectangle node labeled &#x27;&quot;def browser_load_url(url): msg = url # could reformat send request wait for reply html = reply # could reformat return html STUB&quot;&#x27;. It points to node A. It is pointed to by node A. Node C is a rectangle node labeled &#x27;&quot;def handle_server_load_url(url) wait for request url=request html=server_load_url(URL) reply = html send reply STUB&quot;&#x27;. It points to node D. It is pointed to by nodes request, D. Node D is a rectangle node labeled &#x27;&quot;def server_load_url(): ... return html&quot;&#x27;. It points to node C. It is pointed to by node C.">
 <pre class="flowchart-title">Flowchart from flow84, page 8</pre>
-<div class="mermaid">
-flowchart TD
-    A["def main(): html = browser_load_url(URL)"]
-    B["def browser_load_url(url): msg = url # could reformat send request wait for reply html = reply # could reformat return html STUB"]
-    C["def handle_server_load_url(url) wait for request url=request html=server_load_url(URL) reply = html send reply STUB"]
-    D["def server_load_url(): ... return html"]
-
-    A --> B
-    B --request--> C
-    C --> D
-    D --> C
-    C --reply---> B
-    B --> A
-
-    style B fill:#ff0000,color:#ffffff,stroke:#ff0000,stroke-width:1px
-    style C fill:#ff0000,color:#ffffff,stroke:#ff0000,stroke-width:1px
-</div>
+<img src="original_dataset\flow84.png" alt="The flowchart is oriented left to right. Node A is a rectangle node labeled &#x27;&quot;def main(): html = browser_load_url(URL)&quot;&#x27;. It points to node B. It is pointed to by node B. Node B is a rectangle node labeled &#x27;&quot;def browser_load_url(url): msg = url # could reformat send request wait for reply html = reply # could reformat return html STUB&quot;&#x27;. It points to node A. It is pointed to by node A. Node C is a rectangle node labeled &#x27;&quot;def handle_server_load_url(url) wait for request url=request html=server_load_url(URL) reply = html send reply STUB&quot;&#x27;. It points to node D. It is pointed to by nodes request, D. Node D is a rectangle node labeled &#x27;&quot;def server_load_url(): ... return html&quot;&#x27;. It points to node C. It is pointed to by node C." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented left to right. Node client is a rectangle node labeled &#x27;client&#x27;. It is pointed to by node server. Node server is a rectangle node labeled &#x27;server&#x27;. It points to node client.">
 <pre class="flowchart-title">Flowchart from flow85, page 9</pre>
-<div class="mermaid">
-flowchart LR
-    client[client] --> server[server]
-    server --> client
-</div>
+<img src="original_dataset\flow85.png" alt="The flowchart is oriented left to right. Node client is a rectangle node labeled &#x27;client&#x27;. It is pointed to by node server. Node server is a rectangle node labeled &#x27;server&#x27;. It points to node client." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented left to right. Node client is a rectangle node labeled &#x27;Client&#x27;. It points to node internet. It is pointed to by node internet. Node internet is a ellipse node labeled &#x27;Internet&#x27;. It points to node server, to node client. It is pointed to by nodes client, server. Node server is a rectangle node labeled &#x27;Server&#x27;. It points to node internet. It is pointed to by node internet.">
 <pre class="flowchart-title">Flowchart from flow86, page 10</pre>
-<div class="mermaid">
-flowchart TD
-    client[Client]
-    internet((Internet))
-    server[Server]
-
-    client --> internet
-    internet --> server
-    server --> internet
-    internet --> client
-</div>
+<img src="original_dataset\flow86.png" alt="The flowchart is oriented left to right. Node client is a rectangle node labeled &#x27;Client&#x27;. It points to node internet. It is pointed to by node internet. Node internet is a ellipse node labeled &#x27;Internet&#x27;. It points to node server, to node client. It is pointed to by nodes client, server. Node server is a rectangle node labeled &#x27;Server&#x27;. It points to node internet. It is pointed to by node internet." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented left to right. Node anmi is a ellipse node labeled &#x27;another mi&#x27;. It is pointed to by node nausea. Node annotmi is a ellipse node labeled &#x27;another not mi&#x27;. It is pointed to by node nausea. Node chp is a ellipse node labeled &#x27;chest pain&#x27;. It points &#x27;=t&#x27; to node hr, &#x27;=f&#x27; to node nausea. Node hr is a ellipse node labeled &#x27;HR&#x27;. It points &#x27;&lt;60&#x27; to node mi, &#x27;&gt;60&#x27; to node notmi. It is pointed to by node chp. Node mi is a ellipse node labeled &#x27;mi&#x27;. It is pointed to by node hr. Node nausea is a ellipse node labeled &#x27;nausea&#x27;. It points &#x27;=t&#x27; to node anmi, &#x27;=f&#x27; to node annotmi. It is pointed to by node chp. Node notmi is a ellipse node labeled &#x27;not mi&#x27;. It is pointed to by node hr.">
 <pre class="flowchart-title">Flowchart from flow87, page 4</pre>
-<div class="mermaid">
-flowchart TD
-    style default fill:#808080,color:#ffffff,stroke:#808080,stroke-width:1px
-
-    chp((chest pain))
-    hr((HR))
-    nausea((nausea))
-    mi((mi))
-    notmi((not mi))
-    anmi((another mi))
-    annotmi((another not mi))
-
-    chp -->|=t| hr
-    chp -->|=f| nausea
-    hr -->|<60| mi
-    hr -->|>60| notmi
-    nausea -->|=t| anmi
-    nausea -->|=f| annotmi
-</div>
+<img src="original_dataset\flow87.png" alt="The flowchart is oriented left to right. Node anmi is a ellipse node labeled &#x27;another mi&#x27;. It is pointed to by node nausea. Node annotmi is a ellipse node labeled &#x27;another not mi&#x27;. It is pointed to by node nausea. Node chp is a ellipse node labeled &#x27;chest pain&#x27;. It points &#x27;=t&#x27; to node hr, &#x27;=f&#x27; to node nausea. Node hr is a ellipse node labeled &#x27;HR&#x27;. It points &#x27;&lt;60&#x27; to node mi, &#x27;&gt;60&#x27; to node notmi. It is pointed to by node chp. Node mi is a ellipse node labeled &#x27;mi&#x27;. It is pointed to by node hr. Node nausea is a ellipse node labeled &#x27;nausea&#x27;. It points &#x27;=t&#x27; to node anmi, &#x27;=f&#x27; to node annotmi. It is pointed to by node chp. Node notmi is a ellipse node labeled &#x27;not mi&#x27;. It is pointed to by node hr." />
 </div>
 
-<div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node A1 is a rectangle node labeled &#x27;&quot;sending application&quot;&#x27;. Node B1 is a rectangle node labeled &#x27;&quot;reliable sender&quot;&#x27;. It points to node D1. Node C1 is a rectangle node labeled &#x27;&quot;receiving application&quot;&#x27;. Node D1 is a rectangle node labeled &#x27;&quot;reliable receiver&quot;&#x27;. It is pointed to by node B1.">
+<div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node A is a rectangle node labeled &#x27;&quot;sending application&quot;&#x27;. Node B is a rectangle node labeled &#x27;&quot;reliable sender&quot;&#x27;. Node C is a rectangle node labeled &#x27;&quot;receiving application&quot;&#x27;. Node D is a rectangle node labeled &#x27;&quot;reliable receiver&quot;&#x27;.">
 <pre class="flowchart-title">Flowchart from flow88, page 3</pre>
-<div class="mermaid">
-graph TD
-
-subgraph A
-  A1["sending application"] --> B1["reliable sender"]
-end
-
-subgraph B
-  D1["reliable receiver"] -->|each byte of data is delivered exactly once and in order| C1["receiving application"]
-end
-
-B1 --> D1
-</div>
+<img src="original_dataset\flow88.png" alt="The flowchart is oriented top to bottom. Node A is a rectangle node labeled &#x27;&quot;sending application&quot;&#x27;. Node B is a rectangle node labeled &#x27;&quot;reliable sender&quot;&#x27;. Node C is a rectangle node labeled &#x27;&quot;receiving application&quot;&#x27;. Node D is a rectangle node labeled &#x27;&quot;reliable receiver&quot;&#x27;." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented left to right. Node audio_from_phone is a rectangle node labeled &#x27;&quot;audio from phone&quot;&#x27;. It points &#x27;sent to&#x27; to node phone_network. Node phone_network is a rectangle node labeled &#x27;&quot;phone network&quot;&#x27;. It points &#x27;sends to audio&#x27; to node speech_system. It is pointed to by node audio_from_phone. Node speech_system is a rectangle node labeled &#x27;&quot;speech system&quot;&#x27;. It points &#x27;processes audio&#x27; to node speech_system, &#x27;performs action&#x27; to node speech_system. It is pointed to by nodes phone_network, speech_system, speech_system. Node system_performs_action is a rectangle node labeled &#x27;&quot;system performs action&quot;&#x27;.">
 <pre class="flowchart-title">Flowchart from flow92, page 12</pre>
-<div class="mermaid">
-flowchart TD
-    audio_from_phone["audio from phone"]
-    phone_network["phone network"]
-    speech_system["speech system"]
-    system_performs_action["system performs action"]
-    audio_from_phone -->|sent to| phone_network
-    phone_network -->|sends to audio| speech_system
-    speech_system -->|processes audio| speech_system
-    speech_system -->|performs action| speech_system
-    spech_system--->system_performs_action
-    style audio_from_phone fill:#00008b,color:#ffffff,stroke:#0000ff,stroke-width:1px
-    style phone_network fill:#00008b,color:#ffffff,stroke:#0000ff,stroke-width:1px
-    style speech_system fill:#00008b,color:#ffffff,stroke:#0000ff,stroke-width:1px
-
-    linkStyle default stroke:#0000ff
-</div>
+<img src="original_dataset\flow92.png" alt="The flowchart is oriented left to right. Node audio_from_phone is a rectangle node labeled &#x27;&quot;audio from phone&quot;&#x27;. It points &#x27;sent to&#x27; to node phone_network. Node phone_network is a rectangle node labeled &#x27;&quot;phone network&quot;&#x27;. It points &#x27;sends to audio&#x27; to node speech_system. It is pointed to by node audio_from_phone. Node speech_system is a rectangle node labeled &#x27;&quot;speech system&quot;&#x27;. It points &#x27;processes audio&#x27; to node speech_system, &#x27;performs action&#x27; to node speech_system. It is pointed to by nodes phone_network, speech_system, speech_system. Node system_performs_action is a rectangle node labeled &#x27;&quot;system performs action&quot;&#x27;." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented left to right. Node ChiefHoncho is a ellipse node labeled &#x27;Chief Honcho&#x27;. It is pointed to by node Jana. Node Jana is a rectangle node labeled &#x27;Jana&#x27;. It points &#x27;messages&#x27; to node ChiefHoncho. It is pointed to by node Tim. Node Joe is a ellipse node labeled &#x27;Joe&#x27;. It points &#x27;manages&#x27; to node MrScience. Node Kelly is a ellipse node labeled &#x27;Kelly&#x27;. It is pointed to by node Mary. Node Kyle is a rectangle node labeled &#x27;Kyle&#x27;. It is pointed to by node Mary. Node Mary is a rectangle node labeled &#x27;Mary&#x27;. It points &#x27;messages&#x27; to node Kelly, &#x27;messages&#x27; to node Kyle. It is pointed to by node Tim. Node MrScience is a ellipse node labeled &#x27;Mr. Science&#x27;. It is pointed to by node Joe. Node Tim is a rectangle node labeled &#x27;Tim&#x27;. It points &#x27;directs&#x27; to node Jana, &#x27;directs&#x27; to node Mary.">
 <pre class="flowchart-title">Flowchart from flow93, page 14</pre>
-<div class="mermaid">
-flowchart TD
-    style Tim fill:#808080,color:#ffffff,stroke:#808080,stroke-width:1px
-    style Joe fill:#00ffff,color:#ffffff,stroke:#00ffff,stroke-width:1px
-    style Jana fill:#00ffff,color:#ffffff,stroke:#00ffff,stroke-width:1px
-    style Mary fill:#00ffff,color:#ffffff,stroke:#00ffff,stroke-width:1px
-    style Kelly fill:#800080,color:#ffffff,stroke:#800080,stroke-width:1px
-    style Kyle fill:#800080,color:#ffffff,stroke:#800080,stroke-width:1px
-    style MrScience fill:#2f4f4f,color:#ffffff,stroke:#2f4f4f,stroke-width:1px
-    style ChiefHoncho fill:#2f4f4f,color:#ffffff,stroke:#2f4f4f,stroke-width:1px
-
-    Tim[Tim] -->|directs| Joe((Joe))
-    Tim -->|directs| Jana[Jana]
-    Tim -->|directs| Mary[Mary]
-
-    Joe -->|manages| MrScience((Mr. Science))
-    Jana -->|messages| ChiefHoncho((Chief Honcho))
-    Mary -->|messages| Kelly((Kelly))
-    Mary -->|messages| Kyle[Kyle]
-
-    linkStyle 0,1,2 stroke:#ff0000
-    linkStyle 3,4,5,6 stroke:#0000ff
-</div>
+<img src="original_dataset\flow93.png" alt="The flowchart is oriented left to right. Node ChiefHoncho is a ellipse node labeled &#x27;Chief Honcho&#x27;. It is pointed to by node Jana. Node Jana is a rectangle node labeled &#x27;Jana&#x27;. It points &#x27;messages&#x27; to node ChiefHoncho. It is pointed to by node Tim. Node Joe is a ellipse node labeled &#x27;Joe&#x27;. It points &#x27;manages&#x27; to node MrScience. Node Kelly is a ellipse node labeled &#x27;Kelly&#x27;. It is pointed to by node Mary. Node Kyle is a rectangle node labeled &#x27;Kyle&#x27;. It is pointed to by node Mary. Node Mary is a rectangle node labeled &#x27;Mary&#x27;. It points &#x27;messages&#x27; to node Kelly, &#x27;messages&#x27; to node Kyle. It is pointed to by node Tim. Node MrScience is a ellipse node labeled &#x27;Mr. Science&#x27;. It is pointed to by node Joe. Node Tim is a rectangle node labeled &#x27;Tim&#x27;. It points &#x27;directs&#x27; to node Jana, &#x27;directs&#x27; to node Mary." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented top to bottom. Node Attribute is a rectangle node labeled &#x27;Attribute&#x27;. It is pointed to by node Slot. Node AttributeValue is a rectangle node labeled &#x27;AttributeValue&#x27;. It is pointed to by node IntangibleObject. Node Collection is a rectangle node labeled &#x27;Collection&#x27;. It is pointed to by nodes Intangible, RepresentedThing. Node CompositeTangibleandIntangibleObject is a rectangle node labeled &#x27;CompositeTangibleandIntangibleObject&#x27;. It is pointed to by nodes Intelligence, TangibleObject. Node Event is a rectangle node labeled &#x27;Event&#x27;. It points to node Process. It is pointed to by node IndividualObject. Node IndividualObject is a rectangle node labeled &#x27;IndividualObject&#x27;. It points to node Event, to node Stuff. Node Intangible is a rectangle node labeled &#x27;Intangible&#x27;. It points to node IntangibleObject, to node Collection. It is pointed to by node Thing. Node IntangibleObject is a rectangle node labeled &#x27;IntangibleObject&#x27;. It points to node InternalMachineThing, to node AttributeValue, to node IntangibleStuff. It is pointed to by node Intangible. Node IntangibleStuff is a rectangle node labeled &#x27;IntangibleStuff&#x27;. It points to node TangibleStuff. It is pointed to by nodes Stuff, IntangibleObject. Node Intelligence is a rectangle node labeled &#x27;Intelligence&#x27;. It points to node CompositeTangibleandIntangibleObject. It is pointed to by node SomethingExisting. Node InternalMachineThing is a rectangle node labeled &#x27;InternalMachineThing&#x27;. It is pointed to by node IntangibleObject. Node Process is a rectangle node labeled &#x27;Process&#x27;. It points to node SomethingExisting. It is pointed to by nodes Event, Stuff. Node Relationship is a rectangle node labeled &#x27;Relationship&#x27;. It points to node Slot. It is pointed to by node RepresentedThing. Node RepresentedThing is a rectangle node labeled &#x27;RepresentThing&#x27;. It points to node Collection, to node Relationship. It is pointed to by node Thing. Node Slot is a rectangle node labeled &#x27;Slot&#x27;. It points to node Attribute. It is pointed to by node Relationship. Node SomethingExisting is a rectangle node labeled &#x27;SomethingExisting&#x27;. It points to node Intelligence, to node TangibleObject. It is pointed to by node Process. Node Stuff is a rectangle node labeled &#x27;Stuff&#x27;. It points to node Process, to node IntangibleStuff. It is pointed to by node IndividualObject. Node TangibleObject is a rectangle node labeled &#x27;TangibleObject&#x27;. It points to node CompositeTangibleandIntangibleObject. It is pointed to by node SomethingExisting. Node Thing is a rectangle node labeled &#x27;Thing&#x27;. It points to node Intangible, to node RepresentedThing.">
 <pre class="flowchart-title">Flowchart from flow94, page 18</pre>
-<div class="mermaid">
-graph TD
-    Thing[Thing] --> IndividualObject[IndividualObject]
-    Thing --> Intangible[Intangible]
-    Thing --> RepresentedThing[RepresentThing]
-
-    IndividualObject --> Event[Event]
-    IndividualObject --> Stuff[Stuff]
-
-    Event --> Process[Process]
-
-    Stuff --> Process
-    Stuff --> IntangibleStuff[IntangibleStuff]
-    Process --> SomethingExisting[SomethingExisting]
-
-    SomethingExisting --> Intelligence[Intelligence]
-    SomethingExisting --> TangibleObject[TangibleObject]
-
-    Intelligence --> CompositeTangibleandIntangibleObject[CompositeTangibleandIntangibleObject]
-
-    TangibleObject --> CompositeTangibleandIntangibleObject[CompositeTangibleandIntangibleObject]
-
-    Intangible --> IntangibleObject[IntangibleObject]
-    Intangible --> Collection[Collection]
-
-    IntangibleObject --> InternalMachineThing[InternalMachineThing]
-    IntangibleObject --> AttributeValue[AttributeValue]
-    IntangibleObject --> IntangibleStuff[IntangibleStuff]
-
-    RepresentedThing --> Collection
-    RepresentedThing --> Relationship[Relationship]
-
-    Relationship --> Slot[Slot]
-
-    Slot --> Attribute[Attribute]
-
-    IntangibleStuff --> TangibleStuff
-</div>
+<img src="original_dataset\flow94.png" alt="The flowchart is oriented top to bottom. Node Attribute is a rectangle node labeled &#x27;Attribute&#x27;. It is pointed to by node Slot. Node AttributeValue is a rectangle node labeled &#x27;AttributeValue&#x27;. It is pointed to by node IntangibleObject. Node Collection is a rectangle node labeled &#x27;Collection&#x27;. It is pointed to by nodes Intangible, RepresentedThing. Node CompositeTangibleandIntangibleObject is a rectangle node labeled &#x27;CompositeTangibleandIntangibleObject&#x27;. It is pointed to by nodes Intelligence, TangibleObject. Node Event is a rectangle node labeled &#x27;Event&#x27;. It points to node Process. It is pointed to by node IndividualObject. Node IndividualObject is a rectangle node labeled &#x27;IndividualObject&#x27;. It points to node Event, to node Stuff. Node Intangible is a rectangle node labeled &#x27;Intangible&#x27;. It points to node IntangibleObject, to node Collection. It is pointed to by node Thing. Node IntangibleObject is a rectangle node labeled &#x27;IntangibleObject&#x27;. It points to node InternalMachineThing, to node AttributeValue, to node IntangibleStuff. It is pointed to by node Intangible. Node IntangibleStuff is a rectangle node labeled &#x27;IntangibleStuff&#x27;. It points to node TangibleStuff. It is pointed to by nodes Stuff, IntangibleObject. Node Intelligence is a rectangle node labeled &#x27;Intelligence&#x27;. It points to node CompositeTangibleandIntangibleObject. It is pointed to by node SomethingExisting. Node InternalMachineThing is a rectangle node labeled &#x27;InternalMachineThing&#x27;. It is pointed to by node IntangibleObject. Node Process is a rectangle node labeled &#x27;Process&#x27;. It points to node SomethingExisting. It is pointed to by nodes Event, Stuff. Node Relationship is a rectangle node labeled &#x27;Relationship&#x27;. It points to node Slot. It is pointed to by node RepresentedThing. Node RepresentedThing is a rectangle node labeled &#x27;RepresentThing&#x27;. It points to node Collection, to node Relationship. It is pointed to by node Thing. Node Slot is a rectangle node labeled &#x27;Slot&#x27;. It points to node Attribute. It is pointed to by node Relationship. Node SomethingExisting is a rectangle node labeled &#x27;SomethingExisting&#x27;. It points to node Intelligence, to node TangibleObject. It is pointed to by node Process. Node Stuff is a rectangle node labeled &#x27;Stuff&#x27;. It points to node Process, to node IntangibleStuff. It is pointed to by node IndividualObject. Node TangibleObject is a rectangle node labeled &#x27;TangibleObject&#x27;. It points to node CompositeTangibleandIntangibleObject. It is pointed to by node SomethingExisting. Node Thing is a rectangle node labeled &#x27;Thing&#x27;. It points to node Intangible, to node RepresentedThing." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented left to right. Node dude is a rectangle node labeled &#x27;dude&#x27;. It points to node wizard, to node elf. Node elf is a rectangle node labeled &#x27;elf&#x27;. It is pointed to by node dude. Node grandwizard is a rectangle node labeled &#x27;grand wizard&#x27;. It is pointed to by node wizard. Node thief is a rectangle node labeled &#x27;thief&#x27;. Node wizard is a rectangle node labeled &#x27;wizard&#x27;. It points to node grandwizard. It is pointed to by node dude.">
 <pre class="flowchart-title">Flowchart from flow95, page 20</pre>
-<div class="mermaid">
-flowchart TD
-    dude[dude] --> thief[thief]
-    dude --> wizard[wizard]
-    dude --> elf[elf]
-    wizard --> grandwizard[grand wizard]
-
-    style dude fill:#0000ff,color:#ffffff,stroke:#0000ff,stroke-width:1px
-    style thief fill:#0000ff,color:#ffffff,stroke:#0000ff,stroke-width:1px
-    style wizard fill:#0000ff,color:#ffffff,stroke:#0000ff,stroke-width:1px
-    style elf fill:#0000ff,color:#ffffff,stroke:#0000ff,stroke-width:1px
-    style grandwizard fill:#0000ff,color:#ffffff,stroke:#0000ff,stroke-width:1px
-
-    linkStyle default stroke:#0000ff
-</div>
+<img src="original_dataset\flow95.png" alt="The flowchart is oriented left to right. Node dude is a rectangle node labeled &#x27;dude&#x27;. It points to node wizard, to node elf. Node elf is a rectangle node labeled &#x27;elf&#x27;. It is pointed to by node dude. Node grandwizard is a rectangle node labeled &#x27;grand wizard&#x27;. It is pointed to by node wizard. Node thief is a rectangle node labeled &#x27;thief&#x27;. Node wizard is a rectangle node labeled &#x27;wizard&#x27;. It points to node grandwizard. It is pointed to by node dude." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented left to right. Node badelf is a rectangle node labeled &#x27;bad elf&#x27;. It is pointed to by nodes thief, elf. Node dude is a rectangle node labeled &#x27;dude&#x27;. It points to node elf. Node elf is a rectangle node labeled &#x27;elf&#x27;. It points to node badelf. It is pointed to by node dude. Node thief is a rectangle node labeled &#x27;thief&#x27;. It points to node badelf.">
 <pre class="flowchart-title">Flowchart from flow96, page 21</pre>
-<div class="mermaid">
-flowchart TD
-    dude[dude] --> thief[thief]
-    dude --> elf[elf]
-    thief --> badelf[bad elf]
-    elf --> badelf
-
-    style dude fill:#0000ff,color:#ffffff,stroke:#0000ff,stroke-width:1px
-    style thief fill:#0000ff,color:#ffffff,stroke:#0000ff,stroke-width:1px
-    style elf fill:#0000ff,color:#ffffff,stroke:#0000ff,stroke-width:1px
-    style badelf fill:#ff0000,color:#ffffff,stroke:#ff0000,stroke-width:1px
-
-    linkStyle 0,1 stroke:#0000ff
-    linkStyle 2,3 stroke:#ff0000
-</div>
+<img src="original_dataset\flow96.png" alt="The flowchart is oriented left to right. Node badelf is a rectangle node labeled &#x27;bad elf&#x27;. It is pointed to by nodes thief, elf. Node dude is a rectangle node labeled &#x27;dude&#x27;. It points to node elf. Node elf is a rectangle node labeled &#x27;elf&#x27;. It points to node badelf. It is pointed to by node dude. Node thief is a rectangle node labeled &#x27;thief&#x27;. It points to node badelf." />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented left to right. Node actual_device is a rectangle node labeled &#x27;&quot;actual device&quot;&#x27;. It points to node observed_behavior. Node model is a rectangle node labeled &#x27;&quot;model&quot;&#x27;. It points to node predicted_behavior. Node observed_behavior is a rectangle node labeled &#x27;observed behavior&#x27;. It is pointed to by node actual_device. Node predicted_behavior is a rectangle node labeled &#x27;predicted behavior&#x27;. It is pointed to by node model.">
-<pre class="flowchart-title">Flowchart from 99, page 3</pre>
-<div class="mermaid">
-flowchart TD
-    actual_device["actual device"]
-    observed_behavior[observed behavior]
-    predicted_behavior[predicted behavior]
-    model["model"]
-
-    actual_device --> observed_behavior
-    observed_behavior <--> predicted_behavior
-    model --> predicted_behavior
-
-    predicted_behavior --- model
+<pre class="flowchart-title">Flowchart from flow99, page 21</pre>
+<img src="original_dataset\flow99.png" alt="The flowchart is oriented left to right. Node actual_device is a rectangle node labeled &#x27;&quot;actual device&quot;&#x27;. It points to node observed_behavior. Node model is a rectangle node labeled &#x27;&quot;model&quot;&#x27;. It points to node predicted_behavior. Node observed_behavior is a rectangle node labeled &#x27;observed behavior&#x27;. It is pointed to by node actual_device. Node predicted_behavior is a rectangle node labeled &#x27;predicted behavior&#x27;. It is pointed to by node model." />
 </div>
-</div>
+
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented left to right. Node animal is a ellipse node labeled &#x27;animal&#x27;. Node fly is a ellipse node labeled &#x27;fly&#x27;.">
-<pre class="flowchart-title">Flowchart from 101, page 21</pre>
-<div class="mermaid">
-flowchart TD
-    animal((animal)) -->|Loco| fly((fly))
-</div>
+<pre class="flowchart-title">Flowchart from flow101, page 21</pre>
+<img src="original_dataset\flow101.png" alt="The flowchart is oriented left to right. Node animal is a ellipse node labeled &#x27;animal&#x27;. Node fly is a ellipse node labeled &#x27;fly&#x27;. />
 </div>
 
 <div class="flowchart-container" role="img" aria-label="The flowchart is oriented left to right. Node AP is a rectangle node labeled &#x27;Abdominal Pain&#x27;. Node BT is a rectangle node labeled &#x27;Blood Transfusion&#x27;. It points &#x27;&quot;?&quot;&#x27; to node J. Node J is a rectangle node labeled &#x27;Jaundice&#x27;. It is pointed to by node BT.">
-<pre class="flowchart-title">Flowchart from 102, page 21</pre>
-<div class="mermaid">
-flowchart TD
-    BT[Blood Transfusion] --> |"?"| AP[Abdominal Pain]
-    BT --> |"?"| J[Jaundice]
-
-    style BT fill:#000000,stroke:#000000,color:#ffffff,stroke-width:1px,shape:square
-    style AP fill:#000000,stroke:#000000,color:#ffffff,stroke-width:1px,shape:square
-    style J fill:#000000,stroke:#000000,color:#ffffff,stroke-width:1px,shape:square
+<pre class="flowchart-title">Flowchart from flow102, page 21</pre>
+<img src="original_dataset\flow102.png" alt="The flowchart is oriented left to right. Node AP is a rectangle node labeled &#x27;Abdominal Pain&#x27;. Node BT is a rectangle node labeled &#x27;Blood Transfusion&#x27;. It points &#x27;&quot;?&quot;&#x27; to node J. Node J is a rectangle node labeled &#x27;Jaundice&#x27;. It is pointed to by node BT." />
 </div>
-</div>
-
 
 
 
